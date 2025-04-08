@@ -1,0 +1,1346 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="/src/styles.css" rel="stylesheet">
+    <link href="./output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <style>
+      .swiper-button-next::after {
+         display: none; /* Ẩn mũi tên mặc định */
+    }
+
+      .swiper-button-prev::after {
+        display: none; /* Ẩn mũi tên mặc định */
+    }
+    </style>
+    <script type="module" crossorigin src="/assets/index-DzKlK690.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CT2RZC3q.css">
+  </head>
+  <body>
+    <div class="head-mb fixed z-10000 xl:hidden w-full top-0 h-auto bg-white flex justify-between items-center">
+      <i id="menu-toggle" class="fa-solid fa-bars m-2"></i>
+      <div class=" m-2">
+        <img src="/assets/Logo%201-ielhsLBT.png" alt="">
+      </div>
+      <div class="sm:block hidden ">
+        <a href="tel:1900 1806">
+          <button class="flex justify-around items-center cursor-pointer gap-2 text-white bg-gradient-to-r from-[#FFB469] to-[#E57709] 
+                                mx-2 px-3 py-2 rounded-full shadow-lg  hover:shadow-xl hover:brightness-110 active:shadow-md active:brightness-90   
+                                hover:from-[#FFB469] hover:to-[#E57709] ">
+                    <i class="fa-solid fa-phone-volume p-2 rounded-full bg-white text-[#E57709]"></i>
+                    <p class="font-bold">Gọi 1900 1806</p>
+          </button>
+        </a>
+      </div>
+      <div id="overlay" class="fixed z-10 inset-0 bg-black opacity-0 invisible transition-opacity duration-300 xl:hidden"></div>
+      <div id="menu" class="fixed top-0 left-0 h-full z-40 w-64 bg-white shadow-2xl transform -translate-x-full transition-transform duration-300 xl:hidden">
+        <div class="p-6">
+          <button id="menu-close" class="absolute top-4 right-4 text-gray-600">
+            ✖
+          </button>
+          <ul class="flex flex-col gap-6">
+            <li><a href="">Ưu đãi</a></li>
+            <li><a href="">Dịch vụ</a></li>
+            <li><a href="">Giới thiệu</a></li>
+            <li><a href="">Đội ngũ bác sĩ</a></li>
+            <li><a href="">Bảng giá</a></li>
+            <li><a href="">Thư viện</a></li>
+            <li><a href="">Liên hệ</a></li>
+          </ul>
+  
+          <!-- Nút Hotline (Chỉ Hiện Trong Menu Trên Mobile) -->
+          <div class="mt-4 md:hidden">
+            <a href="tel:1900 1806">
+              <button class="flex justify-around items-center cursor-pointer gap-2 text-white bg-gradient-to-r from-[#FFB469] to-[#E57709] 
+                                  px-3 py-2 rounded-full shadow-lg  hover:shadow-xl hover:brightness-110 active:shadow-md active:brightness-90   
+                                  hover:from-[#FFB469] hover:to-[#E57709] ">
+                      <i class="fa-solid fa-phone-volume p-2 rounded-full bg-white text-[#E57709]"></i>
+                      <p class="font-bold">Gọi 1900 1806</p>
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="image-header lg:block hidden mx-2 pr-4 lg:w-1/2 pt-4 pl-2 z-[-100] absolute rounded-tl-[50%] rounded-br-[52%] top-0 right-0 bg-gradient-to-r from-[#3EED8B] to-[#0A9949]"><img src="/assets/Mask%20group-BCqxi9kg.png" alt=""></div>
+    <section class="w-full px-4 ">
+      <div class="container mx-auto ">
+        <div id="desktop-menu" class="hidden xl:block w-full fixed top-0 left-0 z-5000 bg-transparent transition-all duration-300" >
+          <div class="head flex justify-around items-center ">
+            <div class="ml-10">
+              <img src="/assets/Logo%201-ielhsLBT.png" alt="">
+            </div>
+            <div class="nav flex">
+              <ul class="flex gap-4 font-medium">
+                <li class="hover:text-[#3EED8B]"><a href="">Giới thiệu</a></li>
+                <li class="hover:text-[#3EED8B]"><a href="">Đối tượng khách hàng</a></li>
+                <li class="hover:text-[#3EED8B]"><a href="">Quy trình</a></li>
+                <li class="hover:text-[#3EED8B]"><a href="">Bảng giá</a></li>
+                <li class="hover:text-[#3EED8B]"><a href="">Cảm nhận của khách hàng</a></li>
+                <li class="hover:text-[#3EED8B]"><a href="">Đội ngũ bác sĩ</a></li>
+                <li class="hover:text-[#3EED8B]"><a href="">Hình ảnh & Video</a></li>
+              </ul>
+            </div>
+            <div>
+              <div class="mr-10 my-2">
+                <a href="tel:1900 1806">
+                  <button class="flex justify-around items-center cursor-pointer gap-2 text-white bg-gradient-to-r from-[#FFB469] to-[#E57709] 
+                                px-3 py-3 rounded-full shadow-lg  hover:shadow-xl hover:brightness-110 active:shadow-md active:brightness-90   
+                                hover:from-[#FFB469] hover:to-[#E57709] ">
+                    <i class="fa-solid fa-phone-volume p-2 rounded-full bg-white text-[#E57709]"></i>
+                    <p class="font-bold">Gọi 1900 1806</p>
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class=" mx-2 mt-20 xl:mt-40">
+      <div class="container mx-auto ">
+        <div class="xl:flex flex-col justify-center xl:mx-15 ">
+          <!-- Hàng 1 -->
+          <div class="lg:flex items-center gap-4 w-full">
+              <div class="my-10  flex-1 flex items-center justify-center">
+                <div class="xl:flex-col ">
+                  <div>
+                    <h1 class="font-lato  xl:text-[64px] text-2xl font-bold xl:mx-4">Hãy để đôi mắt là cửa sổ của tâm hồn</h1>
+                    <p class="font-nomal text-[#454545] my-5 xl:mx-4">Ortho-K (Orthokeratology - tạo hình giác mạc) là phương pháp sử dụng kính áp tròng cứng được thiết kế đặc biệt với mỗi người để định hình tạm thời giác mạc và cải thiện thị lực. Kính Ortho-K thường đeo vào ban đêm để định hình lại bề mặt trước của mắt.</p>
+                  </div>
+                  <div class="relative  xl:my-10">
+                    <p class="lg:mx-4 my-3 font-medium">Siêu khuyến mãi <span class="font-bold xl:text-4xl text-xl text-[#0A9949]">tháng 8</span>, giảm ngay <span class="font-bold xl:text-4xl text-xl text-[#0A9949]">30%</span> khi đăng ký tại đây!</p>
+                    <div class="relative w-full max-w-md ">
+                      <!-- Input Container -->
+                      <input type="text" class="w-full py-2 pr-50 pl-4 rounded-full border border-[#50C577] focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Nhập số điện thoại...">
+                  
+                      <!-- Button Inside Input -->
+                      <button class="absolute cursor-pointer right-1 top-1/2 shadow-lg shadow-gray-400/50 border border-[#50C577] 
+                                    transition-all duration-200 hover:shadow-xl hover:brightness-110 active:shadow-md active:brightness-90 
+                                    transform -translate-y-1/2 px-3.5 py-1.5 rounded-full bg-gradient-to-l from-[#50C577] to-[#2DBEFC] text-white
+                                    hover:from-[#3cbf94] hover:to-[#00aaff] ">
+                          <div class="flex gap-2">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAE0SURBVHgBzZQNccMwDIWV3QBkDDwGgRAIHYMwWBi0DBYIHYKMQcOgY+ANQcZAk67KpkttR/npXb87neuz9J5dywG4AYhYUpwoPGwJCTqKFv/pYQtE+IjXdLAGEsgp9rxTDNM8wgJYmIZXipoiV0s/o/kXzCGxY543gROUa4UZT7GTcUxhEa8ixYN4EVtfI8x0crI2sn6OCQ+PJEUjuftETrdEmDlIfo2GTcwR5guupMYZ8uvBoDcke5SOEHFvqClBFRwTRWfOUe3q0YaLXbA24w7J1fqbUXz6I4ejV4jpjhnz16IPMYMsyzolzqd4hsu3xsL3pIESdzTkZFhRPNHvF4r3CbNPsCL3wpzw8rqdWuP5R+Av2i0xGDgEcnJl1mOog4wGLWyNMvCzdjbDoJBjl3CP/ALWVspoMYMIwQAAAABJRU5ErkJggg==" alt="">
+                            GỬI THÔNG TIN
+                          </div>
+                      </button>
+                  </div>
+                  </div>
+                </div>
+              </div>
+              <div class=" p-4 flex-1 flex items-center justify-center text-white"></div>
+          </div>
+      </div>
+      </div>
+    </section>
+    <div class=" relative -z-10000 xl:block hidden"><img src="/assets/Rectangle%206554-BbEk5oFg.png" alt=""></div>
+    <div class="xl:block hidden relative -z-100"><img src="/assets/song2-CAvGVRaF.png" alt=""></div>
+    <section class="xl:-mt-350 xl:mx-30 lg:mt-30 -mt-10 relative z-100 ">
+      <div class="container px-2 ">
+        <div class="xl:flex flex-col gap-4 w-full">
+          <!-- Hàng 1 -->
+          <div class="xl:flex gap-4">
+              <div class=" flex-1 flex justify-center ">
+                <h1 class="font-bold xl:text-[40px] text-2xl">Tầm quan trọng của việc sử dụng kính Ortho-K</h1>
+              </div>
+              <div class="  flex-1 flex items-center justify-center">
+                <div >
+                  <p class="text-[#454545] mt-5">Kính Ortho-K là phương pháp sử dụng kính áp tròng cứng được thiết kế đặc biệt với mỗi người để định hình tạm thời giác mạc và cải thiện thị lực. Kính Ortho-K thường đeo vào ban đêm để định hình lại bề mặt trước của mắt. Mà không đem tới bất kỳ tổn thương nào cho mắt.</p>
+                   <p class="text-[#454545] my-4"> Nhiều nghiên cứu lâm sàng cho thấy kính Ortho K mang lại hiệu quả trong việc giảm tiến triển tật khúc xạ khoảng 50% ở trẻ và thậm chí một số trẻ có kết quả tốt hơn. Ngoài ra, kính Ortho-K có những ưu điểm sau:</p>
+                   <button class="flex cursor-pointer gap-2 px-5 py-3 rounded-full my-4 text-white 
+                                  bg-gradient-to-b from-[#FFB469] to-[#E57709] hover:shadow-xl hover:brightness-110 active:shadow-md active:brightness-90   
+                                  hover:from-[#FFB469] hover:to-[#E57709] ">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEzSURBVHgBxZWBccIwDEVFjwG8QT0CI6QbdIO2G7BJu0E9AhuEDYAJHCaADYSEnTsjsGUHON6dDpzI38q3nABkQMQFRY+BDYWFR0KCHi/hsYF7uSEs8a2CdrQijlWSvH/VOkpwYuKhYQGm1xZI6SiWBe1DvP8tF6xdwPNkJb9DsU+l/JlaQQUzInfvDZ7MXIwdxR50LMUX1CD2wFbOsS/bAwynfUGX1jyWFu0ojqDzDsEmZkjE2bY/CkP/HS3yIy2qetdwXtLWdhTHa36lRQMkFRUwMT6oyiFW7nLVTMErlY+sJnVRUlxJnL8hRlrkoHwOBrLEjeKQswVgC8G+Y4tFvtKWc+XpY/ZYxzLmf1aLxwl8Kh3qdEpB1+JTwNsfpIeJm1bxObRh4y932hpCt7hzt2Q4AU//VQoIGiFyAAAAAElFTkSuQmCC" alt="">
+                    <p>ĐĂNG KÍ TƯ VẤN</p>
+                   </button>
+                </div>
+              </div>
+          </div>  
+        </div>
+        <div class="grid md:grid-cols-3  gap-6 mt-10">
+          <div class="md:block flex ">
+            <div class="md:block flex-1 flex justify-center items-center">
+              <img src="/assets/Group%209998-mrfuWTgL.png" alt="">
+            </div>
+            <div class="flex-2">
+              <h1 class="font-bold text-lg mt-3">Phục hồi thị lực</h1>
+              <p class="font-nomal text-[#454545] mt-2">Điều chỉnh độ cận, viễn và thậm chí loạn thị từ nhẹ đến nặng giúp thị lực phục hồi vào ban ngày</p>
+            </div>
+          </div>
+
+          <div class="md:block flex ">
+            <div class="md:block flex-1 flex justify-center items-center">
+              <img src="/assets/Group%209998-mrfuWTgL.png" alt="">
+            </div>
+            <div class="flex-2">
+              <h1 class="font-bold text-lg mt-3">Phục hồi thị lực</h1>
+              <p class="font-nomal text-[#454545] mt-2">Điều chỉnh độ cận, viễn và thậm chí loạn thị từ nhẹ đến nặng giúp thị lực phục hồi vào ban ngày</p>
+            </div>
+          </div>
+
+          <div class="md:block flex ">
+            <div class="md:block flex-1 flex justify-center items-center">
+              <img src="/assets/Group%209998-mrfuWTgL.png" alt="">
+            </div>
+            <div class="flex-2 ">
+              <h1 class="font-bold text-lg mt-3">Phục hồi thị lực</h1>
+              <p class="font-nomal text-[#454545] mt-2">Điều chỉnh độ cận, viễn và thậm chí loạn thị từ nhẹ đến nặng giúp thị lực phục hồi vào ban ngày</p>
+            </div>
+          </div>
+        </div>
+        <div class="grid md:grid-cols-3  gap-6 mt-10">
+          <div class="md:block flex ">
+            <div class="md:block flex-1 flex justify-center items-center">
+              <img src="/assets/Group%209998-mrfuWTgL.png" alt="">
+            </div>
+            <div class="flex-2">
+              <h1 class="font-bold text-lg mt-3">Phục hồi thị lực</h1>
+              <p class="font-nomal text-[#454545] mt-2">Điều chỉnh độ cận, viễn và thậm chí loạn thị từ nhẹ đến nặng giúp thị lực phục hồi vào ban ngày</p>
+            </div>
+          </div>
+
+          <div class="md:block flex ">
+            <div class="md:block flex-1 flex justify-center items-center">
+              <img src="/assets/Group%209998-mrfuWTgL.png" alt="">
+            </div>
+            <div class="flex-2">
+              <h1 class="font-bold text-lg mt-3">Phục hồi thị lực</h1>
+              <p class="font-nomal text-[#454545] mt-2">Điều chỉnh độ cận, viễn và thậm chí loạn thị từ nhẹ đến nặng giúp thị lực phục hồi vào ban ngày</p>
+            </div>
+          </div>
+
+          <div class="md:block flex ">
+            <div class="md:block flex-1 flex justify-center items-center">
+              <img src="/assets/Group%209998-mrfuWTgL.png" alt="">
+            </div>
+            <div class="flex-2">
+              <h1 class="font-bold text-lg mt-3">Phục hồi thị lực</h1>
+              <p class="font-nomal text-[#454545] mt-2">Điều chỉnh độ cận, viễn và thậm chí loạn thị từ nhẹ đến nặng giúp thị lực phục hồi vào ban ngày</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="xl:ml-30 xl:mt-50 mt-10 mx-2">
+      <div class="container px-2">
+        <div class="head grid xl:grid-cols-2">
+          <div>
+            <h1 class="font-bold xl:text-3xl text-2xl text-[#252525]">Ai nên sử dụng kính Ortho-K?</h1>
+            <p class="text-[#454545]  my-4">Ortho-K là phương pháp kiểm soát tật khúc xạ tối ưu, an toàn nhất hiện nay dành cho người lớn và trẻ em mà không cần phẫu thuật. Đối tượng có thể sử dụng kính Ortho K bao gồm:</p>
+          </div>
+          
+            <div class=" hidden relative xl:flex items-center justify-end gap-4">
+              <div class="flex space-x-2">
+                <div class="swiper-button-prev custom-swiper-btn absolute top-0 right-10 ml-100">
+                  <i class="fa-solid fa-arrow-left p-4 rounded-full bg-white text-[#50C577] shadow-lg"></i>
+                </div>
+                <div class="swiper-button-next absolute top-0 right-0 custom-swiper-btn  mr-40">
+                  <i class="fa-solid fa-arrow-right p-4 rounded-full text-[#50C577] bg-white shadow-lg"></i>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="swiper mySwiper relative z-10 ">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide ">
+            <div class="bg-gradient-to-r from-[#50C577] to-[#2DBEFC] rounded-lg rounded-tl-[80px] rounded-br-[80px] p-3">
+              <div class="">
+                <img class="rounded-lg rounded-tl-[70px] h-2/3 object-cover" src="/assets/image%20939-Bh3ughpR.jpg" alt="">
+              </div>
+              <div class="m-4 text-white">
+                <p class="font-bold">Người bị cận thị</p>
+                <p class="font-nomal">Người bị cận thị (dưới 10 độ) không kèm hoặc kèm loạn thị từ 3 độ trở xuống</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide xl:mt-20">
+            <div class="bg-gradient-to-r from-[#50C577] to-[#2DBEFC] rounded-lg rounded-tl-[80px] rounded-br-[80px] p-3">
+              <div class="">
+                <img class="rounded-lg rounded-tl-[70px] h-2/3 object-cover" src="/assets/image%20939-Bh3ughpR.jpg" alt="">
+              </div>
+              <div class="m-4 text-white">
+                <p class="font-bold">Người bị cận thị</p>
+                <p class="font-nomal">Người bị cận thị (dưới 10 độ) không kèm hoặc kèm loạn thị từ 3 độ trở xuống</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="bg-gradient-to-r from-[#50C577] to-[#2DBEFC] rounded-lg rounded-tl-[80px] rounded-br-[80px] p-3">
+              <div class="">
+                <img class="rounded-lg rounded-tl-[70px] h-2/3 object-cover" src="/assets/image%20939-Bh3ughpR.jpg" alt="">
+              </div>
+              <div class="m-4 text-white">
+                <p class="font-bold">Người bị cận thị</p>
+                <p class="font-nomal">Người bị cận thị (dưới 10 độ) không kèm hoặc kèm loạn thị từ 3 độ trở xuống</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide xl:mt-20">
+            <div class="bg-gradient-to-r from-[#50C577] to-[#2DBEFC] rounded-lg rounded-tl-[80px] rounded-br-[80px] p-3">
+              <div class="">
+                <img class="rounded-lg rounded-tl-[70px] h-2/3 object-cover" src="/assets/image%20939-Bh3ughpR.jpg" alt="">
+              </div>
+              <div class="m-4 text-white">
+                <p class="font-bold">Người bị cận thị</p>
+                <p class="font-nomal">Người bị cận thị (dưới 10 độ) không kèm hoặc kèm loạn thị từ 3 độ trở xuống</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="bg-gradient-to-r from-[#50C577] to-[#2DBEFC] rounded-lg rounded-tl-[80px] rounded-br-[80px] p-3">
+              <div class="">
+                <img class="rounded-lg rounded-tl-[70px] h-2/3 object-cover" src="/assets/image%20939-Bh3ughpR.jpg" alt="">
+              </div>
+              <div class="m-4 text-white">
+                <p class="font-bold">Người bị cận thị</p>
+                <p class="font-nomal">Người bị cận thị (dưới 10 độ) không kèm hoặc kèm loạn thị từ 3 độ trở xuống</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide xl:mt-20">
+            <div class="bg-gradient-to-r from-[#50C577] to-[#2DBEFC] rounded-lg rounded-tl-[80px] rounded-br-[80px] p-3">
+              <div class="">
+                <img class="rounded-lg rounded-tl-[70px] h-2/3 object-cover" src="/assets/image%20939-Bh3ughpR.jpg" alt="">
+              </div>
+              <div class="m-4 text-white">
+                <p class="font-bold">Người bị cận thị</p>
+                <p class="font-nomal">Người bị cận thị (dưới 10 độ) không kèm hoặc kèm loạn thị từ 3 độ trở xuống</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      <div class="grid xl:grid-cols-2 xl:mt-40 mt-10 gap-4">
+        <div class="title flex items-center">
+          <div class="flex-col gap-4">
+            <div class="my-auto">
+              <div>
+                <h1 class="font-bold text-2xl xl:text-4xl  text-[#252525]">Tại sao nên chọn gói Ortho-K tại Bệnh viện Đa khoa Phương Đông?</h1>
+                <p class="font-nomal text-[#454545] mt-5">Hiện nay, tại Bệnh viện Đa khoa Phương Đông đáp ứng đầy đủ từ đội ngũ bác sĩ có trình độ chuyên môn cao, cơ sở vật chất, trang thiết bị kỹ thuật hiện đại giúp quá trình thăm khám và điều trị các bệnh về tật khúc xạ an toàn, chính xác. Khi đăng ký sử dụng gói kính Ortho - K tại bệnh viện Phương Đông, khách hàng được trải nghiệm dịch vụ y tế chất lượng cao cùng với các ưu điểm vượt trội sau</p>
+              </div>
+            </div>
+            <div class="grid grid-cols-2 gap-4 mt-5">
+              <div class="grid grid-rows-2 gap-4 mb-10">
+                <div class="">
+                  <div class="border border-[#EBEBEB] hover:shadow-2xl hover:border-transparent transition-all">
+                    <div class="flex justify-center items-center mt-4"><img src="data:image/png;base64,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" alt=""></div>
+                    <div class="text-center my-4">
+                      <p class="font-bold">Đội ngũ bác sĩ giàu kinh nghiệm</p>
+                      <p class="mx-3 ">Hiện nay, tại Bệnh viện Đa khoa Phương Đông đáp ứng đầy đủ từ đội ngũ bác sĩ.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="">
+                  <div class="border border-[#EBEBEB] hover:shadow-2xl hover:border-transparent transition-all">
+                    <div class="flex justify-center items-center mt-4"><img src="data:image/png;base64,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" alt=""></div>
+                    <div class="text-center my-4">
+                      <p class="font-bold">Đội ngũ bác sĩ giàu kinh nghiệm</p>
+                      <p class="mx-3">Hiện nay, tại Bệnh viện Đa khoa Phương Đông đáp ứng đầy đủ từ đội ngũ bác sĩ.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="grid grid-rows-2 mt-10 gap-4">
+                <div class="">
+                  <div class="border border-[#EBEBEB] hover:shadow-2xl hover:border-transparent transition-all">
+                    <div class="flex justify-center items-center mt-4"><img src="data:image/png;base64,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" alt=""></div>
+                    <div class="text-center my-4">
+                      <p class="font-bold">Đội ngũ bác sĩ giàu kinh nghiệm</p>
+                      <p class="mx-3">Hiện nay, tại Bệnh viện Đa khoa Phương Đông đáp ứng đầy đủ từ đội ngũ bác sĩ.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="">
+                  <div class="border border-[#EBEBEB] hover:shadow-2xl hover:border-transparent transition-all">
+                    <div class="flex justify-center items-center mt-4"><img src="data:image/png;base64,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" alt=""></div>
+                    <div class="text-center my-4">
+                      <p class="font-bold">Đội ngũ bác sĩ giàu kinh nghiệm</p>
+                      <p class="mx-3">Hiện nay, tại Bệnh viện Đa khoa Phương Đông đáp ứng đầy đủ từ đội ngũ bác sĩ.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="images flex justify-center items-center">
+          <div class="">
+            <img src="/assets/Group%2010004-BPbAR-TJ.png" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="relative mt-100 -z-1000 xl:block hidden"><img src="/assets/song-PGssAJJw.png" alt=""></div>
+    <section class="xl:mx-30 xl:-mt-110 mx-2 mt-15 relative z-10">
+      <div class="contaier">
+        <div class="head">
+          <h1 class="text-center font-bold xl:text-[60px] text-2xl">Đội ngũ bác sĩ của chúng tôi</h1>
+        </div>
+        <div class="swiper mySwiper2 my-4">
+          <div class="swiper-wrapper my-4">
+            <div class="swiper-slide rounded-tl-[80px] border border-[#EBEBEB] hover:shadow-2xl hover:border-transparent transition-all">
+              <div class="bg-white">
+                <div class="relative ">
+                  <div><img src="/assets/Rectangle%206771-yvljXkew.png" alt=""></div>
+                  <div class="absolute bottom-0 w-2/3 left-10"><img src="/assets/image%20824-By-28pEV.png" alt=""></div>
+                </div>
+                <div>
+                  <div class="text-center ">
+                    <p class="my-2">NGUYỄN TRUNG CHÍNH</p>
+                    <p class="text-[#0A9949] text-sm">PGS.TS. Bác sĩ Ung bướu</p>
+                    <p class="mt-4">
+                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                    </p>
+                    <p class="text-[#888888] text-sm  mb-4">4.8/5 (38 bình chọn)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide rounded-tl-[80px] border border-[#EBEBEB] hover:shadow-2xl hover:border-transparent transition-all">
+              <div class="bg-white">
+                <div class="relative ">
+                  <div><img src="/assets/Rectangle%206771-yvljXkew.png" alt=""></div>
+                  <div class="absolute bottom-0 w-2/3 left-10"><img src="/assets/image%20824-By-28pEV.png" alt=""></div>
+                </div>
+                <div>
+                  <div class="text-center ">
+                    <p class="my-2">NGUYỄN TRUNG CHÍNH</p>
+                    <p class="text-[#0A9949] text-sm">PGS.TS. Bác sĩ Ung bướu</p>
+                    <p class="mt-4">
+                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                    </p>
+                    <p class="text-[#888888] text-sm  mb-4">4.8/5 (38 bình chọn)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide rounded-tl-[80px] border border-[#EBEBEB] hover:shadow-2xl hover:border-transparent transition-all">
+              <div class="bg-white">
+                <div class="relative ">
+                  <div><img src="/assets/Rectangle%206771-yvljXkew.png" alt=""></div>
+                  <div class="absolute bottom-0 w-2/3 left-10"><img src="/assets/image%20824-By-28pEV.png" alt=""></div>
+                </div>
+                <div>
+                  <div class="text-center ">
+                    <p class="my-2">NGUYỄN TRUNG CHÍNH</p>
+                    <p class="text-[#0A9949] text-sm">PGS.TS. Bác sĩ Ung bướu</p>
+                    <p class="mt-4">
+                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                    </p>
+                    <p class="text-[#888888] text-sm  mb-4">4.8/5 (38 bình chọn)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide rounded-tl-[80px] border border-[#EBEBEB] hover:shadow-2xl hover:border-transparent transition-all">
+              <div class="bg-white">
+                <div class="relative ">
+                  <div><img src="/assets/Rectangle%206771-yvljXkew.png" alt=""></div>
+                  <div class="absolute bottom-0 w-2/3 left-10"><img src="/assets/image%20824-By-28pEV.png" alt=""></div>
+                </div>
+                <div>
+                  <div class="text-center ">
+                    <p class="my-2">NGUYỄN TRUNG CHÍNH</p>
+                    <p class="text-[#0A9949] text-sm">PGS.TS. Bác sĩ Ung bướu</p>
+                    <p class="mt-4">
+                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                    </p>
+                    <p class="text-[#888888] text-sm  mb-4">4.8/5 (38 bình chọn)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide rounded-tl-[80px] border border-[#EBEBEB] hover:shadow-2xl hover:border-transparent transition-all">
+              <div class="bg-white">
+                <div class="relative ">
+                  <div><img src="/assets/Rectangle%206771-yvljXkew.png" alt=""></div>
+                  <div class="absolute bottom-0 w-2/3 left-10"><img src="/assets/image%20824-By-28pEV.png" alt=""></div>
+                </div>
+                <div>
+                  <div class="text-center ">
+                    <p class="my-2">NGUYỄN TRUNG CHÍNH</p>
+                    <p class="text-[#0A9949] text-sm">PGS.TS. Bác sĩ Ung bướu</p>
+                    <p class="mt-4">
+                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                    </p>
+                    <p class="text-[#888888] text-sm  mb-4">4.8/5 (38 bình chọn)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide rounded-tl-[80px] border border-[#EBEBEB] hover:shadow-2xl hover:border-transparent transition-all">
+              <div class="bg-white">
+                <div class="relative ">
+                  <div><img src="/assets/Rectangle%206771-yvljXkew.png" alt=""></div>
+                  <div class="absolute bottom-0 w-2/3 left-10"><img src="/assets/image%20824-By-28pEV.png" alt=""></div>
+                </div>
+                <div>
+                  <div class="text-center ">
+                    <p class="my-2">NGUYỄN TRUNG CHÍNH</p>
+                    <p class="text-[#0A9949] text-sm">PGS.TS. Bác sĩ Ung bướu</p>
+                    <p class="mt-4">
+                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                    </p>
+                    <p class="text-[#888888] text-sm  mb-4">4.8/5 (38 bình chọn)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide rounded-tl-[80px] border border-[#EBEBEB] hover:shadow-2xl hover:border-transparent transition-all">
+              <div class="bg-white">
+                <div class="relative ">
+                  <div><img src="/assets/Rectangle%206771-yvljXkew.png" alt=""></div>
+                  <div class="absolute bottom-0 w-2/3 left-10"><img src="/assets/image%20824-By-28pEV.png" alt=""></div>
+                </div>
+                <div>
+                  <div class="text-center ">
+                    <p class="my-2">NGUYỄN TRUNG CHÍNH</p>
+                    <p class="text-[#0A9949] text-sm">PGS.TS. Bác sĩ Ung bướu</p>
+                    <p class="mt-4">
+                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                    </p>
+                    <p class="text-[#888888] text-sm  mb-4">4.8/5 (38 bình chọn)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide rounded-tl-[80px] border border-[#EBEBEB] hover:shadow-2xl hover:border-transparent transition-all">
+              <div class="bg-white">
+                <div class="relative ">
+                  <div><img src="/assets/Rectangle%206771-yvljXkew.png" alt=""></div>
+                  <div class="absolute bottom-0 w-2/3 left-10"><img src="/assets/image%20824-By-28pEV.png" alt=""></div>
+                </div>
+                <div>
+                  <div class="text-center ">
+                    <p class="my-2">NGUYỄN TRUNG CHÍNH</p>
+                    <p class="text-[#0A9949] text-sm">PGS.TS. Bác sĩ Ung bướu</p>
+                    <p class="mt-4">
+                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                    </p>
+                    <p class="text-[#888888] text-sm mb-4">4.8/5 (38 bình chọn)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next">
+            <i class="fa-solid fa-arrow-right p-4 rounded-full bg-white text-[#50C577] shadow-lg"></i>
+          </div>
+          <div class="swiper-button-prev">
+            <i class="fa-solid fa-arrow-left p-4 rounded-full bg-white shadow-lg text-[#50C577]"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="mx-4 xl:mt-30">
+      <div class="container ">
+        <div class="cont">
+          <div class="ima relative xl:block hidden">
+            <img src="/assets/Rectangle%206490-C-fAyEhE.png" alt="">
+          </div>
+          <div class="xl:ml-30 xl:-mt-160 relative xl:z-1000 -z-1000">
+           <div class="flex ">
+              <h1 class="font-bold xl:text-[38px] text-2xl  xl:mx-1 mx-auto text-center xl:text-white leading-[100%] lg:w-1/2 my-10">Cảm nhận của khách hàng sau khi sử dụng dịch vụ</h1>
+              <div class="ml-120 hidden relative xl:flex items-center justify-end gap-4">
+                <div class="flex space-x-2">
+                  <div class="swiper-button-prev custom-swiper-btn absolute top-0 right-10 ml-10">
+                    <i class="fa-solid fa-arrow-right p-4 rounded-full bg-white shadow-lg text-[#50C577]"></i>
+                  </div>
+                  <div class="swiper-button-next  absolute top-0 right-0 custom-swiper-btn ">
+                    <i class="fa-solid fa-arrow-left p-4 rounded-full bg-white shadow-lg text-[#50C577]"></i>
+                  </div>
+                </div>
+              </div>
+           </div>
+            <div class="swiper mySwiper3 relative ">
+              <div class="swiper-wrapper rounded-lg">
+                <div class="swiper-slide rounded-lg">
+                  <div class="shadow-2xl rounded-xl  bg-white">
+                  <div class="relative ">
+                    <div class="w-full overflow-hidden rounded-tl-xl rounded-tr-xl">
+                      <img class="object-cover w-full" src="/assets/Rectangle%206420-szM70W4A.jpg" alt="">
+                    </div>
+                    <div class="w-1/4 absolute top-[50%] right-[35%]">
+                      <img src="/assets/Ellipse%201145-B0Vr1wNu.png" alt="">
+                    </div>
+                  </div>
+                  <div class="my-10  px-4 py-3 ">
+                    <h1 class="text-center font-bold text-[#252525] ">Nguyễn Minh Ánh</h1>
+                    <p class="text-center text-[#252525]">
+                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                    </p>
+                    <div class="m-4">
+                      <h1 class="text-center font-medium ">Bệnh viện Phương Đông mang đến cho tôi cảm giác vô cùng bình yên và an tâm khi thăm khám tại đây!</h1>
+                      <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit nulla etiam sed  </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                <div class="swiper-slide">
+                  <div class="shadow-2xl rounded-xl bg-white">
+                    <div class="relative">
+                      <div class="w-full overflow-hidden rounded-tl-xl rounded-tr-xl">
+                        <img class="object-cover w-full" src="/assets/Rectangle%206420-szM70W4A.jpg" alt="">
+                      </div>
+                      <div class="w-1/4 absolute top-[50%] right-[35%]">
+                        <img src="/assets/Ellipse%201145-B0Vr1wNu.png" alt="">
+                      </div>
+                    </div>
+                    <div class="my-10  px-4 py-3 ">
+                      <h1 class="text-center font-bold text-[#252525] ">Nguyễn Minh Ánh</h1>
+                      <p class="text-center text-[#252525]">
+                        <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                        <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                        <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                        <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                        <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                      </p>
+                      <div class="m-4">
+                        <h1 class="text-center font-medium ">Bệnh viện Phương Đông mang đến cho tôi cảm giác vô cùng bình yên và an tâm khi thăm khám tại đây!</h1>
+                        <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit nulla etiam sed  </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="shadow-2xl rounded-xl bg-white">
+                    <div class="relative">
+                      <div class="w-full overflow-hidden rounded-tl-xl rounded-tr-xl">
+                        <img class="object-cover w-full" src="/assets/Rectangle%206420-szM70W4A.jpg" alt="">
+                      </div>
+                      <div class="w-1/4 absolute top-[50%] right-[35%]">
+                        <img src="/assets/Ellipse%201145-B0Vr1wNu.png" alt="">
+                      </div>
+                    </div>
+                    <div class="my-10  px-4 py-3 ">
+                      <h1 class="text-center font-bold text-[#252525] ">Nguyễn Minh Ánh</h1>
+                      <p class="text-center text-[#252525]">
+                        <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                        <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                        <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                        <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                        <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                      </p>
+                      <div class="m-4">
+                        <h1 class="text-center font-medium ">Bệnh viện Phương Đông mang đến cho tôi cảm giác vô cùng bình yên và an tâm khi thăm khám tại đây!</h1>
+                        <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit nulla etiam sed  </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="shadow-2xl rounded-xl bg-white">
+                    <div class="relative">
+                      <div class="w-full overflow-hidden rounded-tl-xl rounded-tr-xl">
+                        <img class="object-cover w-full" src="/assets/Rectangle%206420-szM70W4A.jpg" alt="">
+                      </div>
+                      <div class="w-1/4 absolute top-[50%] right-[35%]">
+                        <img src="/assets/Ellipse%201145-B0Vr1wNu.png" alt="">
+                      </div>
+                    </div>
+                    <div class="my-10  px-4 py-3 ">
+                      <h1 class="text-center font-bold text-[#252525] ">Nguyễn Minh Ánh</h1>
+                      <p class="text-center text-[#252525]">
+                        <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                        <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                        <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                        <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                        <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                      </p>
+                      <div class="m-4">
+                        <h1 class="text-center font-medium ">Bệnh viện Phương Đông mang đến cho tôi cảm giác vô cùng bình yên và an tâm khi thăm khám tại đây!</h1>
+                        <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit nulla etiam sed  </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="shadow-2xl rounded-xl bg-white">
+                    <div class="relative">
+                      <div class="w-full overflow-hidden rounded-tl-xl rounded-tr-xl">
+                        <img class="object-cover w-full" src="/assets/Rectangle%206420-szM70W4A.jpg" alt="">
+                      </div>
+                      <div class="w-1/4 absolute top-[50%] right-[35%]">
+                        <img src="/assets/Ellipse%201145-B0Vr1wNu.png" alt="">
+                      </div>
+                    </div>
+                    <div class="my-10  px-4 py-3">
+                      <h1 class="text-center font-bold text-[#252525] ">Nguyễn Minh Ánh</h1>
+                      <p class="text-center text-[#252525]">
+                        <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                        <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                        <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                        <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                        <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                      </p>
+                      <div class="m-4">
+                        <h1 class="text-center font-medium ">Bệnh viện Phương Đông mang đến cho tôi cảm giác vô cùng bình yên và an tâm khi thăm khám tại đây!</h1>
+                        <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit nulla etiam sed  </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="shadow-2xl rounded-xl bg-white">
+                    <div class="relative">
+                      <div class="w-full overflow-hidden rounded-tl-xl rounded-tr-xl">
+                        <img class="object-cover w-full" src="/assets/Rectangle%206420-szM70W4A.jpg" alt="">
+                      </div>
+                      <div class="w-1/4 absolute top-[50%] right-[35%]">
+                        <img src="/assets/Ellipse%201145-B0Vr1wNu.png" alt="">
+                      </div>
+                    </div>
+                    <div class="my-10  px-4 py-3">
+                      <h1 class="text-center font-bold text-[#252525] ">Nguyễn Minh Ánh</h1>
+                      <p class="text-center text-[#252525]">
+                        <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                        <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                        <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                        <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                        <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                      </p>
+                      <div class="m-4">
+                        <h1 class="text-center font-medium ">Bệnh viện Phương Đông mang đến cho tôi cảm giác vô cùng bình yên và an tâm khi thăm khám tại đây!</h1>
+                        <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit nulla etiam sed  </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="shadow-2xl rounded-xl bg-white">
+                    <div class="relative">
+                      <div class="w-full overflow-hidden rounded-tl-xl rounded-tr-xl">
+                        <img class="object-cover w-full" src="/assets/Rectangle%206420-szM70W4A.jpg" alt="">
+                      </div>
+                      <div class="w-1/4 absolute top-[50%] right-[35%]">
+                        <img src="/assets/Ellipse%201145-B0Vr1wNu.png" alt="">
+                      </div>
+                    </div>
+                    <div class="my-10  px-4 py-3 ">
+                      <h1 class="text-center font-bold text-[#252525] ">Nguyễn Minh Ánh</h1>
+                      <p class="text-center text-[#252525]">
+                        <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                        <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                        <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                        <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                        <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                      </p>
+                      <div class="m-4">
+                        <h1 class="text-center font-medium ">Bệnh viện Phương Đông mang đến cho tôi cảm giác vô cùng bình yên và an tâm khi thăm khám tại đây!</h1>
+                        <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit nulla etiam sed  </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="shadow-2xl rounded-xl bg-white">
+                    <div class="relative">
+                      <div class="w-full overflow-hidden rounded-tl-xl rounded-tr-xl">
+                        <img class="object-cover w-full" src="/assets/Rectangle%206420-szM70W4A.jpg" alt="">
+                      </div>
+                      <div class="w-1/4 absolute top-[50%] right-[35%]">
+                        <img src="/assets/Ellipse%201145-B0Vr1wNu.png" alt="">
+                      </div>
+                    </div>
+                    <div class="my-10  px-4 py-3">
+                      <h1 class="text-center font-bold text-[#252525] ">Nguyễn Minh Ánh</h1>
+                      <p class="text-center text-[#252525]">
+                        <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                        <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                        <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                        <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                        <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                      </p>
+                      <div class="m-4">
+                        <h1 class="text-center font-medium ">Bệnh viện Phương Đông mang đến cho tôi cảm giác vô cùng bình yên và an tâm khi thăm khám tại đây!</h1>
+                        <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit nulla etiam sed  </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="shadow-2xl rounded-xl bg-white">
+                    <div class="relative ">
+                      <div class="w-full overflow-hidden rounded-tl-xl rounded-tr-xl">
+                        <img class="object-cover w-full" src="/assets/Rectangle%206420-szM70W4A.jpg" alt="">
+                      </div>
+                      <div class="w-1/4 absolute top-[50%] right-[35%]">
+                        <img src="/assets/Ellipse%201145-B0Vr1wNu.png" alt="">
+                      </div>
+                    </div>
+                    <div class="my-10  px-4 py-3">
+                      <h1 class="text-center font-bold text-[#252525] ">Nguyễn Minh Ánh</h1>
+                      <p class="text-center text-[#252525]">
+                        <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                        <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                        <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                        <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                        <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                      </p>
+                      <div class="m-4">
+                        <h1 class="text-center font-medium ">Bệnh viện Phương Đông mang đến cho tôi cảm giác vô cùng bình yên và an tâm khi thăm khám tại đây!</h1>
+                        <p class="text-center ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit nulla etiam sed  </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="xl:mx-30 xl:mt-50 mx-2">
+      <div class="container">
+        <div class="flex flex-col gap-4 w-full">
+          <div class="xl:flex gap-4">
+            <div class=" flex-1 flex items-center justify-center ">
+              <div class="head hidden xl:block text-center">
+                <p class="font-bold p-4 text-2xl xl:text-[38px] text-[#252525] border border-[#EBEBEB] border-t-0 border-l-0 border-r-0 ">Những câu hỏi thường gặp</p>
+              </div>
+            </div>
+            <div class=" flex-1 flex items-center justify-center ">
+              <div class="head text-center xl:block hidden">
+                <p class="font-bold xl:text-[38px] text-2xl text-[#252525]">Bảng giá dịch vụ gói Ortho-K</p>
+              </div>
+            </div>
+        </div>
+          <!-- Hàng 1 -->
+          <div class="xl:flex gap-4">
+              <div class=" p-4 flex-1 flex  justify-center">
+                <div>
+                  <div class="head xl:hidden block text-center">
+                    <p class="font-bold p-4 text-2xl xl:text-[38px] text-[#252525] border border-[#EBEBEB] border-t-0 border-l-0 border-r-0 ">Những câu hỏi thường gặp</p>
+                  </div>
+                    <div class="nav">
+                      <ul class="py-2 ">
+                        <li id="item" class="flex justify-between py-4 relative border border-[#EBEBEB] border-t-0 border-l-0 border-r-0 ">
+                          <div class="md:w-xl">
+                            <div class="flex justify-between">
+                              <p class="text-[#252525] text-lg font-medium">Cách phân biệt giữa cảm cúm thông thường và covid-19?</p>
+                              <img class="md:block hidden animate-fade animate-duration-[2000ms] animate-delay-0 image" data-state="first" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADpSURBVHgB5VXBDcIwDLwLqO2LTWAHWIB9mIoJQEJiAaahFfRwUkB8DykPhKWoqeXLxT4nAf7KVsdey0MvBzN3gqkeJCyzCGYcYG3fJSAiA3jmE5g1sghSEARDPZFTaBAiWCnYBAIqZhAlErwM3sHb804jOkkNRzSxUIdRDe4xxLbMb1ogJyB2GtWWuPhOmOzLuOyP2Mum5bSpDy4G9DUPVF7q2TUsG0/sP3RQ8XMCxm9M3/4vbX3aKw8H450DDqJUsYvKOajaRQNQ87JLuNLV0L6Loo0qligNQk2RGRq4NXI1AJP7Ivy6PQCRKWEoHsfE0AAAAABJRU5ErkJggg==" alt="">
+                            </div>
+                            <p class="content py-2 text-[#454545] hidden animate-fade-down animate-duration-[2000ms] animate-delay-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien, nec morbi mauris, turpis fringilla condimentum urna sagittis est. Id tortor odio posuere a cursus netus massa. Tellus etiam nisl pretium feugiat nulla. Pulvinar nisl et suspendisse velit ornare sed dolor, convallis dolor. Et, dignissim amet sed orci at amet id nulla mauris. </p>
+                          </div>
+                        </li>
+                        <li id="item" class="flex justify-between py-4 relative border border-[#EBEBEB] border-t-0 border-l-0 border-r-0 ">
+                          <div class="md:w-xl">
+                            <div class="flex justify-between">
+                              <p class="text-[#252525] text-lg font-medium">Cách phân biệt giữa cảm cúm thông thường và covid-19?</p>
+                              <img class="md:block hidden animate-fade animate-duration-[2000ms] animate-delay-0 image" data-state="first" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADpSURBVHgB5VXBDcIwDLwLqO2LTWAHWIB9mIoJQEJiAaahFfRwUkB8DykPhKWoqeXLxT4nAf7KVsdey0MvBzN3gqkeJCyzCGYcYG3fJSAiA3jmE5g1sghSEARDPZFTaBAiWCnYBAIqZhAlErwM3sHb804jOkkNRzSxUIdRDe4xxLbMb1ogJyB2GtWWuPhOmOzLuOyP2Mum5bSpDy4G9DUPVF7q2TUsG0/sP3RQ8XMCxm9M3/4vbX3aKw8H450DDqJUsYvKOajaRQNQ87JLuNLV0L6Loo0qligNQk2RGRq4NXI1AJP7Ivy6PQCRKWEoHsfE0AAAAABJRU5ErkJggg==" alt="">
+                            </div>
+                            <p class="content py-2 text-[#454545] hidden animate-fade-down animate-duration-[2000ms] animate-delay-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien, nec morbi mauris, turpis fringilla condimentum urna sagittis est. Id tortor odio posuere a cursus netus massa. Tellus etiam nisl pretium feugiat nulla. Pulvinar nisl et suspendisse velit ornare sed dolor, convallis dolor. Et, dignissim amet sed orci at amet id nulla mauris. </p>
+                          </div>
+                        </li>
+                        <li id="item" class="flex justify-between py-4 relative border border-[#EBEBEB] border-t-0 border-l-0 border-r-0 ">
+                          <div class="md:w-xl">
+                            <div class="flex justify-between">
+                              <p class="text-[#252525] text-lg font-medium">Cách phân biệt giữa cảm cúm thông thường và covid-19?</p>
+                              <img class="md:block hidden animate-fade animate-duration-[2000ms] animate-delay-0 image" data-state="first" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADpSURBVHgB5VXBDcIwDLwLqO2LTWAHWIB9mIoJQEJiAaahFfRwUkB8DykPhKWoqeXLxT4nAf7KVsdey0MvBzN3gqkeJCyzCGYcYG3fJSAiA3jmE5g1sghSEARDPZFTaBAiWCnYBAIqZhAlErwM3sHb804jOkkNRzSxUIdRDe4xxLbMb1ogJyB2GtWWuPhOmOzLuOyP2Mum5bSpDy4G9DUPVF7q2TUsG0/sP3RQ8XMCxm9M3/4vbX3aKw8H450DDqJUsYvKOajaRQNQ87JLuNLV0L6Loo0qligNQk2RGRq4NXI1AJP7Ivy6PQCRKWEoHsfE0AAAAABJRU5ErkJggg==" alt="">
+                            </div>
+                            <p class="content py-2 text-[#454545] hidden animate-fade-down animate-duration-[2000ms] animate-delay-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien, nec morbi mauris, turpis fringilla condimentum urna sagittis est. Id tortor odio posuere a cursus netus massa. Tellus etiam nisl pretium feugiat nulla. Pulvinar nisl et suspendisse velit ornare sed dolor, convallis dolor. Et, dignissim amet sed orci at amet id nulla mauris. </p>
+                          </div>
+                        </li>
+                        <li id="item" class="flex justify-between py-4 relative border border-[#EBEBEB] border-t-0 border-l-0 border-r-0 ">
+                          <div class="md:w-xl">
+                            <div class="flex justify-between">
+                              <p class="text-[#252525] text-lg font-medium">Cách phân biệt giữa cảm cúm thông thường và covid-19?</p>
+                              <img class="md:block hidden animate-fade animate-duration-[2000ms] animate-delay-0 image" data-state="first" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADpSURBVHgB5VXBDcIwDLwLqO2LTWAHWIB9mIoJQEJiAaahFfRwUkB8DykPhKWoqeXLxT4nAf7KVsdey0MvBzN3gqkeJCyzCGYcYG3fJSAiA3jmE5g1sghSEARDPZFTaBAiWCnYBAIqZhAlErwM3sHb804jOkkNRzSxUIdRDe4xxLbMb1ogJyB2GtWWuPhOmOzLuOyP2Mum5bSpDy4G9DUPVF7q2TUsG0/sP3RQ8XMCxm9M3/4vbX3aKw8H450DDqJUsYvKOajaRQNQ87JLuNLV0L6Loo0qligNQk2RGRq4NXI1AJP7Ivy6PQCRKWEoHsfE0AAAAABJRU5ErkJggg==" alt="">
+                            </div>
+                            <p class="content py-2 text-[#454545] hidden animate-fade-down animate-duration-[2000ms] animate-delay-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien, nec morbi mauris, turpis fringilla condimentum urna sagittis est. Id tortor odio posuere a cursus netus massa. Tellus etiam nisl pretium feugiat nulla. Pulvinar nisl et suspendisse velit ornare sed dolor, convallis dolor. Et, dignissim amet sed orci at amet id nulla mauris. </p>
+                          </div>
+                        </li>
+                        <li id="item" class="flex justify-between py-4 relative border border-[#EBEBEB] border-t-0 border-l-0 border-r-0 ">
+                          <div class="md:w-xl">
+                            <div class="flex justify-between">
+                              <p class="text-[#252525] text-lg font-medium">Cách phân biệt giữa cảm cúm thông thường và covid-19?</p>
+                              <img class="md:block hidden animate-fade animate-duration-[2000ms] animate-delay-0 image" data-state="first" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADpSURBVHgB5VXBDcIwDLwLqO2LTWAHWIB9mIoJQEJiAaahFfRwUkB8DykPhKWoqeXLxT4nAf7KVsdey0MvBzN3gqkeJCyzCGYcYG3fJSAiA3jmE5g1sghSEARDPZFTaBAiWCnYBAIqZhAlErwM3sHb804jOkkNRzSxUIdRDe4xxLbMb1ogJyB2GtWWuPhOmOzLuOyP2Mum5bSpDy4G9DUPVF7q2TUsG0/sP3RQ8XMCxm9M3/4vbX3aKw8H450DDqJUsYvKOajaRQNQ87JLuNLV0L6Loo0qligNQk2RGRq4NXI1AJP7Ivy6PQCRKWEoHsfE0AAAAABJRU5ErkJggg==" alt="">
+                            </div>
+                            <p class="content py-2 text-[#454545] hidden animate-fade-down animate-duration-[2000ms] animate-delay-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien, nec morbi mauris, turpis fringilla condimentum urna sagittis est. Id tortor odio posuere a cursus netus massa. Tellus etiam nisl pretium feugiat nulla. Pulvinar nisl et suspendisse velit ornare sed dolor, convallis dolor. Et, dignissim amet sed orci at amet id nulla mauris. </p>
+                          </div>
+                        </li>
+                        <li id="item" class="flex justify-between py-4 relative border border-[#EBEBEB] border-t-0 border-l-0 border-r-0 ">
+                          <div class="md:w-xl">
+                            <div class="flex justify-between">
+                              <p class="text-[#252525] text-lg font-medium">Cách phân biệt giữa cảm cúm thông thường và covid-19?</p>
+                              <img class="md:block hidden animate-fade animate-duration-[2000ms] animate-delay-0 image" data-state="first" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADpSURBVHgB5VXBDcIwDLwLqO2LTWAHWIB9mIoJQEJiAaahFfRwUkB8DykPhKWoqeXLxT4nAf7KVsdey0MvBzN3gqkeJCyzCGYcYG3fJSAiA3jmE5g1sghSEARDPZFTaBAiWCnYBAIqZhAlErwM3sHb804jOkkNRzSxUIdRDe4xxLbMb1ogJyB2GtWWuPhOmOzLuOyP2Mum5bSpDy4G9DUPVF7q2TUsG0/sP3RQ8XMCxm9M3/4vbX3aKw8H450DDqJUsYvKOajaRQNQ87JLuNLV0L6Loo0qligNQk2RGRq4NXI1AJP7Ivy6PQCRKWEoHsfE0AAAAABJRU5ErkJggg==" alt="">
+                            </div>
+                            <p class="content py-2 text-[#454545] hidden animate-fade-down animate-duration-[2000ms] animate-delay-0">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien, nec morbi mauris, turpis fringilla condimentum urna sagittis est. Id tortor odio posuere a cursus netus massa. Tellus etiam nisl pretium feugiat nulla. Pulvinar nisl et suspendisse velit ornare sed dolor, convallis dolor. Et, dignissim amet sed orci at amet id nulla mauris. </p>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  
+                </div>
+              </div>
+              <div class="  flex-1 flex justify-center ">
+                <div>
+                  <div class="head xl:hidden block text-center">
+                    <p class="font-bold text-2xl xl:text-[38px] text-[#252525]">Bảng giá dịch vụ gói Ortho-K</p>
+                  </div>
+                  <div class="nav ">
+                    <ul class="text-[#888888] flex justify-around items-center py-4">
+                      <li class="tab text-[#50C577] border-b-2 border-[#50C577] lg:text-base text-[10px] md:p-2 hover:text-[#50C577] cursor-pointer " data-image="image 940.png">ORTHO K - 01</li>
+                      <li class="tab lg:text-base text-[10px] md:p-2 hover:text-[#50C577] cursor-pointer " data-image="image 940.png">ORTHO K - 02</li>
+                      <li class="tab lg:text-base text-[10px] md:p-2 hover:text-[#50C577] cursor-pointer " data-image="image 940.png">ORTHO K - 03</li>
+                      <li class="tab lg:text-base text-[10px] md:p-2 hover:text-[#50C577] cursor-pointer " data-image="image 940.png">ORTHO K - 04</li>
+                      <li class="tab lg:text-base text-[10px] md:p-2 hover:text-[#50C577] cursor-pointer " data-image="image 940.png">ORTHO K - 05</li>
+                    </ul>
+                  </div>
+                  <div class="relative overflow-hidden mx-auto">
+                    <img id="ortho-image" class="animate-fade-left animate-duration-[2000ms] animate-delay-0" src="/assets/image%20940-XcsMV7Z8.png" alt="">
+                  </div>
+                </div>
+              </div>
+              </div>
+          </div>
+      </div>
+      </div>
+    </section>
+    <section class=" mt-20">
+      <div class="relative -z-100">
+        <img src="/assets/Rectangle%206508-BebXGZwU.jpg" alt="">
+      </div>
+      <div class="container ">
+        <div class="lg:flex flex-col gap-4 w-full relative z-100 xl:-mt-110 ">
+          <!-- Hàng 1 -->
+          <div class="xl:flex gap-4 xl:ml-25 ">
+              <div class="gap-4 p-4 flex-1 flex items-center justify-center">
+                <div class="shadow-2xl rounded-lg bg-white ">
+                  <div class="head rounded-tl-lg rounded-tr-lg p-4 text-white text-center bg-gradient-to-r from-[#50C577] to-[#2DBEFC]">
+                    <h1 class="font-bold text-3xl">Đăng ký tư vấn miễn phí</h1>
+                    <p>Đặt hẹn ngay để nhận tư vấn và chúng tôi sẽ xếp lịch khám kịp thời!</p>
+                  </div>
+                  <div class="xl:flex my-6 mx-8">
+                    <div class="flex-1 w-full  xl:flex xl:justify-center xl:items-center">
+                      <div class="">
+                        <div class="relative mx-2">
+                          <input type="text" id="floatingInput1" placeholder="Nhập nội dung..." 
+                                 class="peer w-full border border-gray-300 rounded-md px-3 pt-4 pb-2 outline-none focus:border-blue-500 transition 
+                                        placeholder-transparent" />
+                          
+                          <label for="floatingInput1" 
+                                 class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 text-base transition-all
+                                        peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 
+                                        peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 
+                                        peer-focus:top-0 peer-focus:-translate-y-1/2 peer-focus:text-sm peer-focus:text-blue-500 peer-focus:px-2 bg-white">
+                            Họ và tên*
+                          </label>
+                        </div>
+                        <div class="relative mt-5  mx-2">
+                          <input type="text" id="floatingInput2" placeholder="Nhập nội dung..." 
+                                 class="peer w-full border border-gray-300 rounded-md px-3 pt-4 pb-2 outline-none focus:border-blue-500 transition 
+                                        placeholder-transparent" />
+                          
+                          <label for="floatingInput2" 
+                                 class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 text-base transition-all
+                                        peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 
+                                        peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 
+                                        peer-focus:top-0 peer-focus:-translate-y-1/2 peer-focus:text-sm peer-focus:text-blue-500 peer-focus:px-2 bg-white">
+                            E-mail
+                          </label>
+                        </div>
+                        <div class="relative mt-5  mx-2">
+                          <input type="text" id="floatingInput3" placeholder="Nhập nội dung..." 
+                                 class="peer w-full border border-gray-300 rounded-md px-3 pt-4 pb-2 outline-none focus:border-blue-500 transition 
+                                        placeholder-transparent" />
+                          
+                          <label for="floatingInput3" 
+                                 class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 text-base transition-all
+                                        peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 
+                                        peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 
+                                        peer-focus:top-0 peer-focus:-translate-y-1/2 peer-focus:text-sm peer-focus:text-blue-500 peer-focus:px-2 bg-white">
+                            Số điện thoại*
+                          </label>
+                        </div>
+                        <div class="relative mt-5 mx-2 flex justify-around items-center">
+                          <input type="text" id="datepicker" placeholder="Nhập nội dung..." 
+                                 class="peer w-full border border-gray-300 rounded-md px-3 pt-4 pb-2 outline-none focus:border-blue-500 transition 
+                                        placeholder-transparent" />
+                          <label for="datepicker" 
+                                 class="items-center absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 text-base transition-all
+                                        peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 
+                                        peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 
+                                        peer-focus:top-0 peer-focus:-translate-y-1/2 peer-focus:text-sm peer-focus:text-blue-500 peer-focus:px-2 bg-white">
+                            <p>Ngày đặt</p>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex-1 mx-2 xl:mx-5 ">
+                      <div>
+                        <div class="relative xl:mt-0.5 mt-5">
+                          <textarea rows="4" id="floatingTextarea" placeholder="Nhập nội dung..." 
+                                 class="peer w-full border border-gray-300 rounded-md px-3 pt-4 pb-2 outline-none focus:border-blue-500 transition 
+                                        placeholder-transparent" ></textarea>
+                          
+                          <label for="floatingTextarea" 
+                                 class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 text-base transition-all
+                                        peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 
+                                        peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 
+                                        peer-focus:top-0 peer-focus:-translate-y-1/2 peer-focus:text-sm peer-focus:text-blue-500 peer-focus:px-2 bg-white">
+                            Nhập nội dung
+                          </label>
+                        </div>
+                        <div class="flex justify-around items-center gap-2 mt-5">
+                          <div class="mt-4">
+                            <label class="inline-flex items-center space-x-2 cursor-pointer">
+                              <input type="checkbox" class="sr-only peer" />
+                              <div class="w-5 h-5 border-1 border-[#EBEBEB] rounded-md flex items-center justify-center peer-checked:bg-blue-500">
+                                <i class="fa-solid fa-check text-white hidden peer-checked:block"></i>
+                              </div>
+                            </label>
+                          </div>
+                          <p class="text-sm">Tôi không phải người máy</p>
+                          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHOSURBVHgBtZRNTsJQEMdnHm2jK9kQtuxkpy41LlzrQjyBeALLCSgnAE4g3EATiVsWakzUIDsSF3ZHAjGwBPsxTpGQppRXqPBPmpm+Tub3Zt68Ivh03LAMQiiCRN+fbUCAIRF8INEdgX3bKRyai+IxuBAF8QBzIqgBWaUwkAguOOQMYVUh5Emord3yqy4FHDWsohCJMsQQtyKJAsvZ6vuses+ftejwfqQvkzy0RQGRSwUUYoc9YwI4eaCMRXaL3eQ6AH5NWmSRZUQkn50L8u7Y1NkzYQnhdPdfi0Ooro5V3dZs3Zuup1N1UnW23MqAcAx2LyX5QRnTOCcgEZ6aqPZ8pl1NXw0e4dm3TuHAZJPPVt9ABhGc/Dw0OZDp/jgl/9rjmWoE47bchI6+Fs5VwM8+hBOaLxfbJkRoJNxrkJyfWPSRyI0cl7+ZJ0MWg/1+n2QBruuW0um0ATElNpk8CjDUNK0C/5QMkHQcJ9Z/aVmAdw/yvV7vptvtZiCmIg95CjLZNBGxnUqlVmrbUgC/GICrxE9a5E0LmwJsQIp/FLka79IVYY2aK5ch+hQSesNjtSiQoKIoygEfbB3WIOluBoNBxrbtHMNyQog9tslVK/gF5gbNzTSVBK8AAAAASUVORK5CYII=" alt="">
+                        </div>
+                        <button class="text-white rounded-full mt-5 cursor-pointer 
+                                        w-full py-3 bg-gradient-to-r from-[#50C577] to-[#2DBEFC]
+                                        border border-[#50C577] 
+                                        shadow-lg shadow-gray-400/50 
+                                        transition-all duration-200 
+                                        hover:from-[#3cbf94] hover:to-[#00aaff] 
+                                        hover:shadow-xl hover:brightness-110 
+                                        active:shadow-md active:brightness-90">
+                          GỬI YÊU CẦU
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class=" p-4 flex-1 flex items-center justify-center text-white"></div>
+          </div>
+          
+      </div>
+      </div>
+    </section>
+    <section class="bg-gradient-to-r from-[#1CAB55] to-[#04A4EC] ">
+      <div class="container">
+        <div class="lg:flex flex-col gap-4 w-full ">
+          <!-- Hàng 1 -->
+          <div class="lg:flex gap-4 xl:mx-32">
+              <div class=" p-4 flex-1 flex items-center justify-center text-white">
+                <div>
+                  <div><img src="/assets/Logo%202-Cj4_QBiF.png" alt=""></div>
+                  <div>
+                    <h6 class="font-medium text-lg my-2">Bệnh viên đa khoa phương đông</h6>
+                    <p class="sub !text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna sit morbi nisl contale consectetur pellentesque ullamcorper con viverra id cursus hendreritenim ultricies</p>
+                  </div>
+                </div>
+              </div>
+              <div class=" p-4 flex-1 flex  text-white">
+               <div >
+                  <h6 class="font-medium text-lg my-2">Thông tin liên hệ</h6>
+                  <p>Địa chỉ: <strong>Số 9, Phố Viên, Cổ Nhuế 2, Bắc Từ Liêm, Hà Nội</strong></p>
+                  <p ><a class="flex" href="mailto:bvphuongdong@phuongdonghospital.vn">Email: <b>bvphuongdong@phuongdonghospital.vn</b></a></p>
+                  <p><strong>info.benhvienphuongdong@gmail.com</strong></p>
+                  <p>Tổng đài tư vấn:<strong> 19001806</strong></p>
+               </div>
+              </div>
+              <div class=" p-4 flex-1 flex   text-white">
+                <div>
+                  <h4 class="font-medium text-lg my-2">Giờ làm việc</h4>
+                  <p>Từ 7:00 - 19:00 từ Thứ 2 đến CN</p>
+                  <p>Cấp cứu 24/7: 0833 015 115</p>
+                  <p>Hotline Tiêm chủng: 0911 615 115</p>
+                  <p>Hotline Hỗ trợ khách hàng: 1900 1806</p>
+                </div>
+              </div>
+              <div class="p-4  flex-1 flex   text-white">
+                <div class="flex-col justify-around items-center">
+                  <h4 class="font-medium text-lg my-2">Theo dõi chúng tôi</h4>
+                  <div class="flex justify-around my-5">
+                    <i class="cursor-pointer fa-brands fa-facebook-f px-4 py-3 rounded-full border border-white"></i>
+                    <i class="cursor-pointer fa-brands fa-youtube p-3 rounded-full border border-white"></i>
+                    <i class="cursor-pointer fa-brands fa-tiktok p-3 rounded-full border border-white"></i>
+                  </div>
+                  <div>
+                    <img src="/assets/thong-bao-website-voi-bo-cong-thuong_grande_waifu2x_photo_noise3_scale_tta_1%201-CZQeKKWR.png" alt="">
+                  </div>
+                </div>
+              </div>
+          </div>
+      </div>
+      
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+    flatpickr("#datepicker", {
+    dateFormat: "Y-m-d", // Định dạng ngày
+    disableMobile: true,  // Tắt chế độ xem trên di động (nếu bạn muốn sử dụng thiết bị di động)
+    allowInput: true,  // Cho phép người dùng nhập ngày thủ công
+    theme: "tailwind" // Tùy chọn theme cho Tailwind
+    });
+    document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.getElementById("menu-toggle");
+    const menuClose = document.getElementById("menu-close");
+    const menu = document.getElementById("menu");
+    const overlay = document.getElementById("overlay");
+    const header = document.getElementById("desktop-menu");
+    const image = document.querySelector(".image-header img");
+    const items = document.querySelectorAll(".nav li");
+    const tabs = document.querySelectorAll(".tab");
+    const imageli = document.getElementById("ortho-image");
+
+    document.querySelectorAll('.relative input, .relative textarea').forEach(field => {
+    const label = field.nextElementSibling;
+
+    if (!label || label.tagName.toLowerCase() !== 'label') return;
+
+    const toggleLabel = () => {
+    if (field.value.trim() !== '') {
+      label.classList.add('!top-0', '!-translate-y-1/2', 'text-sm', 'text-blue-500', 'px-2');
+    } else if (!field.matches(':focus')) {
+      label.classList.remove('!top-0', '!-translate-y-1/2', 'text-sm', 'text-blue-500', 'px-2');
+    }
+    };
+
+    field.addEventListener('input', toggleLabel);
+    field.addEventListener('blur', toggleLabel);
+    field.addEventListener('focus', toggleLabel);
+
+    toggleLabel(); 
+    });
+
+
+
+    flatpickr("#datepicker", {
+    onChange: function(selectedDates) {
+      const label = document.querySelector("label[for='datepicker']");
+      if (selectedDates.length > 0) {
+        label.classList.add("-top-2", "-translate-y-1/2", "text-sm", "text-blue-500");
+        label.classList.remove("top-1/2", "-translate-y-1/2", "text-base", "text-gray-400");
+      } else {
+        label.classList.remove("top-0", "-translate-y-1/2", "text-sm", "text-blue-500");
+        label.classList.add("top-1/2", "-translate-y-1/2", "text-base", "text-gray-400");
+      }
+    }
+  });
+
+  const imageElement = document.getElementById('ortho-image');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const imageSrc = tab.getAttribute('data-image');
+      imageElement.src = `./public/img/${imageSrc}`;
+      
+      imageElement.classList.remove('animate-fade-left');
+      tab.classList.add('text-[#50C577]', 'border-b-2', 'border-[#50C577]');
+      void imageElement.offsetWidth;
+      imageElement.classList.add('animate-fade-left');
+      
+      tabs.forEach(t => {
+        t.classList.remove('text-[#50C577]', 'border-b-2', 'border-[#50C577]');
+        t.classList.add('text-[#888888]');
+      });
+
+      tab.classList.remove('text-[#888888]');
+      tab.classList.add('text-[#50C577]', 'border-b-2', 'border-[#50C577]');
+      })
+    });
+    items.forEach(item =>{
+      item.addEventListener('click', function(){
+        const content = this.querySelector(".content");
+        const image = this.querySelector(".image")
+        content.classList.toggle('hidden');
+        
+        const state = image.getAttribute('data-state');
+
+        image.style.opacity = 0;
+
+        setTimeout(()=>{
+          if (state === 'first'){
+            image.src = './public/img/Frame 9197.png';
+            image.setAttribute('data-state' ,'second');
+          } else{
+            image.src = './public/img/Frame 91972.png';
+            image.setAttribute('data-state' , 'first')
+          }
+
+          image.style.opacity = 1;
+        },300)
+        
+    })
+  })
+    
+    function openMenu() {
+        menu.classList.remove("-translate-x-full");
+        overlay.classList.remove("invisible", "opacity-0");
+        overlay.classList.add("opacity-50");
+    }
+
+    
+    function closeMenu() {
+        menu.classList.add("-translate-x-full");
+        overlay.classList.add("invisible", "opacity-0");
+        overlay.classList.remove("opacity-50");
+    }
+
+    function handleScroll() {
+        if (window.scrollY >= (image.clientHeight)/3) {
+            header.classList.remove("bg-transparent");
+            header.classList.add("bg-white", "shadow-md");
+        } else {
+            header.classList.add("bg-transparent");
+            header.classList.remove("bg-white", "shadow-md");
+        }
+    }
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+
+    menuToggle.addEventListener("click", openMenu);
+
+    menuClose.addEventListener("click", closeMenu);
+
+    overlay.addEventListener("click", closeMenu);
+    });
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        loop:true,
+        navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        centeredSlides: true,
+        spaceBetween: 30,
+        grabCursor: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints:{
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 4,
+            spaceBetween: 50,
+          },
+        }
+      });
+
+      var swiper2 = new Swiper(".mySwiper2", {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints:{
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 4,
+            spaceBetween: 50,
+          },
+        }
+    });
+      var swiper3 = new Swiper(".mySwiper3", {
+      slidesPerView: 1,
+      loop:true,
+      autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+      spaceBetween: 10,
+      freeMode: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints:{
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+          },
+        }
+    });
+    </script>
+  </body>
+</html>
