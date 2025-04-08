@@ -1,2 +1,10 @@
 @import "tailwindcss";
+@import "tailwindcss-animated";
 
+.swiper-button-next::after {
+    display: none; /* Ẩn mũi tên mặc định */
+  }
+
+  .swiper-button-prev::after {
+    display: none; /* Ẩn mũi tên mặc định */
+  }

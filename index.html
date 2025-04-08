@@ -6,21 +6,25 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="/src/styles.css" rel="stylesheet">
     <link href="./output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
   </head>
   <body>
-    <div class="head-mb  xl:hidden  h-auto bg-white flex justify-between items-center">
+    <div class="head-mb fixed z-10000 xl:hidden w-full top-0 h-auto bg-white flex justify-between items-center">
       <i id="menu-toggle" class="fa-solid fa-bars m-2"></i>
       <div class=" m-2">
         <img src="./public/img/Logo 1.png" alt="">
       </div>
       <div class="sm:block hidden ">
         <a href="tel:1900 1806">
-          <button class="flex cursor-pointer m-2 gap-2 text-white bg-gradient-to-r from-[#FFB469] to-[#E57709] px-2 py-2 rounded-full shadow-lg">
-            <img src="./public/icon/Group.png" alt="">
-            <p class="">Gọi 1900 1806</p>
+          <button class="flex justify-around items-center cursor-pointer gap-2 text-white bg-gradient-to-r from-[#FFB469] to-[#E57709] 
+                                mx-2 px-3 py-2 rounded-full shadow-lg  hover:shadow-xl hover:brightness-110 active:shadow-md active:brightness-90   
+                                hover:from-[#FFB469] hover:to-[#E57709] ">
+                    <i class="fa-solid fa-phone-volume p-2 rounded-full bg-white text-[#E57709]"></i>
+                    <p class="font-bold">Gọi 1900 1806</p>
           </button>
         </a>
       </div>
@@ -42,18 +46,22 @@
   
           <!-- Nút Hotline (Chỉ Hiện Trong Menu Trên Mobile) -->
           <div class="mt-4 md:hidden">
-            <button class="flex shadow-lg gap-2 bg-gradient-to-b from-[#FFB469] to-[#E57709] text-white pr-6 pl-4 py-2 rounded-full w-full">
-              <img src="./public/icon/Phones/Phone, Call.png" alt="">
-              <a href="tel:1900 1806">Hotline: 1900 1806</a>
-            </button>
+            <a href="tel:1900 1806">
+              <button class="flex justify-around items-center cursor-pointer gap-2 text-white bg-gradient-to-r from-[#FFB469] to-[#E57709] 
+                                  px-3 py-2 rounded-full shadow-lg  hover:shadow-xl hover:brightness-110 active:shadow-md active:brightness-90   
+                                  hover:from-[#FFB469] hover:to-[#E57709] ">
+                      <i class="fa-solid fa-phone-volume p-2 rounded-full bg-white text-[#E57709]"></i>
+                      <p class="font-bold">Gọi 1900 1806</p>
+              </button>
+            </a>
           </div>
         </div>
       </div>
     </div>
-    <div class="lg:block hidden mx-2 pr-4 lg:w-1/2 pt-4 pl-2 z-[-100] absolute rounded-tl-[50%] rounded-br-[52%] top-0 right-0 bg-gradient-to-r from-[#3EED8B] to-[#0A9949]"><img src="./public/img/Mask group.png" alt=""></div>
+    <div class="image-header lg:block hidden mx-2 pr-4 lg:w-1/2 pt-4 pl-2 z-[-100] absolute rounded-tl-[50%] rounded-br-[52%] top-0 right-0 bg-gradient-to-r from-[#3EED8B] to-[#0A9949]"><img src="./public/img/Mask group.png" alt=""></div>
     <section class="w-full px-4 ">
       <div class="container mx-auto ">
-        <div class="hidden xl:block w-full">
+        <div id="desktop-menu" class="hidden xl:block w-full fixed top-0 left-0 z-5000 bg-transparent transition-all duration-300" >
           <div class="head flex justify-around items-center ">
             <div class="ml-10">
               <img src="./public/img/Logo 1.png" alt="">
@@ -72,8 +80,10 @@
             <div>
               <div class="mr-10 my-2">
                 <a href="tel:1900 1806">
-                  <button class="flex cursor-pointer gap-2 text-white bg-gradient-to-r from-[#FFB469] to-[#E57709] px-3 py-3 rounded-full shadow-lg">
-                    <img src="./public/icon/Group.png" alt="">
+                  <button class="flex justify-around items-center cursor-pointer gap-2 text-white bg-gradient-to-r from-[#FFB469] to-[#E57709] 
+                                px-3 py-3 rounded-full shadow-lg  hover:shadow-xl hover:brightness-110 active:shadow-md active:brightness-90   
+                                hover:from-[#FFB469] hover:to-[#E57709] ">
+                    <i class="fa-solid fa-phone-volume p-2 rounded-full bg-white text-[#E57709]"></i>
                     <p class="font-bold">Gọi 1900 1806</p>
                   </button>
                 </a>
@@ -83,7 +93,7 @@
         </div>
       </div>
     </section>
-    <section class=" mx-2">
+    <section class=" mx-2 mt-20 xl:mt-40">
       <div class="container mx-auto ">
         <div class="xl:flex flex-col justify-center xl:mx-15 ">
           <!-- Hàng 1 -->
@@ -91,17 +101,20 @@
               <div class="my-10  flex-1 flex items-center justify-center">
                 <div class="xl:flex-col ">
                   <div>
-                    <h1 class="font-lato  xl:text-[64px] text-4xl font-bold mx-4">Hãy để đôi mắt là cửa sổ của tâm hồn</h1>
-                    <p class="font-nomal text-[#454545] my-5 mx-4">Ortho-K (Orthokeratology - tạo hình giác mạc) là phương pháp sử dụng kính áp tròng cứng được thiết kế đặc biệt với mỗi người để định hình tạm thời giác mạc và cải thiện thị lực. Kính Ortho-K thường đeo vào ban đêm để định hình lại bề mặt trước của mắt.</p>
+                    <h1 class="font-lato  xl:text-[64px] text-2xl font-bold xl:mx-4">Hãy để đôi mắt là cửa sổ của tâm hồn</h1>
+                    <p class="font-nomal text-[#454545] my-5 xl:mx-4">Ortho-K (Orthokeratology - tạo hình giác mạc) là phương pháp sử dụng kính áp tròng cứng được thiết kế đặc biệt với mỗi người để định hình tạm thời giác mạc và cải thiện thị lực. Kính Ortho-K thường đeo vào ban đêm để định hình lại bề mặt trước của mắt.</p>
                   </div>
-                  <div class="relative  my-10">
-                    <p class="lg:mx-4 my-3 font-medium">Siêu khuyến mãi <span class="font-bold text-4xl text-[#0A9949]">tháng 8</span>, giảm ngay <span class="font-bold text-4xl text-[#0A9949]">30%</span> khi đăng ký tại đây!</p>
+                  <div class="relative  xl:my-10">
+                    <p class="lg:mx-4 my-3 font-medium">Siêu khuyến mãi <span class="font-bold xl:text-4xl text-xl text-[#0A9949]">tháng 8</span>, giảm ngay <span class="font-bold xl:text-4xl text-xl text-[#0A9949]">30%</span> khi đăng ký tại đây!</p>
                     <div class="relative w-full max-w-md ">
                       <!-- Input Container -->
-                      <input type="text" class="w-full py-2 pl-4 pr-10 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Nhập văn bản...">
+                      <input type="text" class="w-full py-2 pr-50 pl-4 rounded-full border border-[#50C577] focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Nhập số điện thoại...">
                   
                       <!-- Button Inside Input -->
-                      <button class="absolute -z-1000 right-1 top-1/2 transform -translate-y-1/2 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-[#50C577] to-[#2DBEFC] text-white">
+                      <button class="absolute cursor-pointer right-1 top-1/2 shadow-lg shadow-gray-400/50 border border-[#50C577] 
+                                    transition-all duration-200 hover:shadow-xl hover:brightness-110 active:shadow-md active:brightness-90 
+                                    transform -translate-y-1/2 px-3.5 py-1.5 rounded-full bg-gradient-to-l from-[#50C577] to-[#2DBEFC] text-white
+                                    hover:from-[#3cbf94] hover:to-[#00aaff] ">
                           <div class="flex gap-2">
                             <img src="./public/img/Frame.png" alt="">
                             GỬI THÔNG TIN
@@ -116,19 +129,23 @@
       </div>
       </div>
     </section>
-    <section class="xl:mt-70 xl:mx-30 -mt-20">
+    <div class=" relative -z-10000 xl:block hidden"><img src="./public/img/Rectangle 6554.png" alt=""></div>
+    <div class="xl:block hidden relative -z-100"><img src="./public/img/song2.png" alt=""></div>
+    <section class="xl:-mt-350 xl:mx-30 lg:mt-30 -mt-10 relative z-100 ">
       <div class="container px-2 ">
         <div class="xl:flex flex-col gap-4 w-full">
           <!-- Hàng 1 -->
           <div class="xl:flex gap-4">
               <div class=" flex-1 flex justify-center ">
-                <h1 class="font-bold text-[40px] ]">Tầm quan trọng của việc sử dụng kính Ortho-K</h1>
+                <h1 class="font-bold xl:text-[40px] text-2xl">Tầm quan trọng của việc sử dụng kính Ortho-K</h1>
               </div>
               <div class="  flex-1 flex items-center justify-center">
                 <div >
-                  <p class="text-[#454545]">Kính Ortho-K là phương pháp sử dụng kính áp tròng cứng được thiết kế đặc biệt với mỗi người để định hình tạm thời giác mạc và cải thiện thị lực. Kính Ortho-K thường đeo vào ban đêm để định hình lại bề mặt trước của mắt. Mà không đem tới bất kỳ tổn thương nào cho mắt.</p>
+                  <p class="text-[#454545] mt-5">Kính Ortho-K là phương pháp sử dụng kính áp tròng cứng được thiết kế đặc biệt với mỗi người để định hình tạm thời giác mạc và cải thiện thị lực. Kính Ortho-K thường đeo vào ban đêm để định hình lại bề mặt trước của mắt. Mà không đem tới bất kỳ tổn thương nào cho mắt.</p>
                    <p class="text-[#454545] my-4"> Nhiều nghiên cứu lâm sàng cho thấy kính Ortho K mang lại hiệu quả trong việc giảm tiến triển tật khúc xạ khoảng 50% ở trẻ và thậm chí một số trẻ có kết quả tốt hơn. Ngoài ra, kính Ortho-K có những ưu điểm sau:</p>
-                   <button class="flex cursor-pointer gap-2 px-5 py-3 rounded-full my-4 text-white bg-gradient-to-b from-[#FFB469] to-[#E57709]">
+                   <button class="flex cursor-pointer gap-2 px-5 py-3 rounded-full my-4 text-white 
+                                  bg-gradient-to-b from-[#FFB469] to-[#E57709] hover:shadow-xl hover:brightness-110 active:shadow-md active:brightness-90   
+                                  hover:from-[#FFB469] hover:to-[#E57709] ">
                     <img src="./public/img/form.png" alt="">
                     <p>ĐĂNG KÍ TƯ VẤN</p>
                    </button>
@@ -200,17 +217,27 @@
         </div>
       </div>
     </section>
-    <section class="xl:ml-30 mt-20 mx-2">
+    <section class="xl:ml-30 xl:mt-50 mt-10 mx-2">
       <div class="container px-2">
         <div class="head grid xl:grid-cols-2">
           <div>
-            <h1 class="font-bold text-3xl text-[#252525]">Ai nên sử dụng kính Ortho-K?</h1>
+            <h1 class="font-bold xl:text-3xl text-2xl text-[#252525]">Ai nên sử dụng kính Ortho-K?</h1>
             <p class="text-[#454545]  my-4">Ortho-K là phương pháp kiểm soát tật khúc xạ tối ưu, an toàn nhất hiện nay dành cho người lớn và trẻ em mà không cần phẫu thuật. Đối tượng có thể sử dụng kính Ortho K bao gồm:</p>
           </div>
-          <div></div>
+          
+            <div class=" hidden relative xl:flex items-center justify-end gap-4">
+              <div class="flex space-x-2">
+                <div class="swiper-button-prev custom-swiper-btn absolute top-0 right-10 ml-100">
+                  <i class="fa-solid fa-arrow-left p-4 rounded-full bg-white text-[#50C577] shadow-lg"></i>
+                </div>
+                <div class="swiper-button-next absolute top-0 right-0 custom-swiper-btn  mr-40">
+                  <i class="fa-solid fa-arrow-right p-4 rounded-full text-[#50C577] bg-white shadow-lg"></i>
+                </div>
+              </div>
+            </div>
         </div>
       </div>
-      <div class="swiper mySwiper ">
+      <div class="swiper mySwiper relative z-10 ">
         <div class="swiper-wrapper">
           <div class="swiper-slide ">
             <div class="bg-gradient-to-r from-[#50C577] to-[#2DBEFC] rounded-lg rounded-tl-[80px] rounded-br-[80px] p-3">
@@ -281,12 +308,12 @@
         </div>
         
       </div>
-      <div class="grid xl:grid-cols-2 mt-20 gap-4">
+      <div class="grid xl:grid-cols-2 xl:mt-40 mt-10 gap-4">
         <div class="title flex items-center">
           <div class="flex-col gap-4">
             <div class="my-auto">
               <div>
-                <h1 class="font-bold text-4xl  text-[#252525]">Tại sao nên chọn gói Ortho-K tại Bệnh viện Đa khoa Phương Đông?</h1>
+                <h1 class="font-bold text-2xl xl:text-4xl  text-[#252525]">Tại sao nên chọn gói Ortho-K tại Bệnh viện Đa khoa Phương Đông?</h1>
                 <p class="font-nomal text-[#454545] mt-5">Hiện nay, tại Bệnh viện Đa khoa Phương Đông đáp ứng đầy đủ từ đội ngũ bác sĩ có trình độ chuyên môn cao, cơ sở vật chất, trang thiết bị kỹ thuật hiện đại giúp quá trình thăm khám và điều trị các bệnh về tật khúc xạ an toàn, chính xác. Khi đăng ký sử dụng gói kính Ortho - K tại bệnh viện Phương Đông, khách hàng được trải nghiệm dịch vụ y tế chất lượng cao cùng với các ưu điểm vượt trội sau</p>
               </div>
             </div>
@@ -341,37 +368,16 @@
         </div>
       </div>
     </section>
-    <section class="xl:mx-30 mt-20 mx-2 ">
+    <div class="relative mt-100 -z-1000 xl:block hidden"><img src="./public/img/song.png" alt=""></div>
+    <section class="xl:mx-30 xl:-mt-110 mx-2 mt-15 relative z-10">
       <div class="contaier">
         <div class="head">
-          <h1 class="text-center font-bold text-[60px]">Đội ngũ bác sĩ của chúng tôi</h1>
+          <h1 class="text-center font-bold xl:text-[60px] text-2xl">Đội ngũ bác sĩ của chúng tôi</h1>
         </div>
-        <div #swiperRef="" class="swiper mySwiper2 my-10 ">
-          <div class="swiper-wrapper my-2 ">
-            <div class="swiper-slide rounded-tl-[50px] border border-[#EBEBEB] hover:shadow-2xl hover:border-transparent transition-all">
-              <div class="">
-                <div class="relative -z-1000">
-                  <div><img src="./public/img/Rectangle 6771.png" alt=""></div>
-                  <div class="absolute bottom-0 w-2/3 left-10"><img src="./public/img/image 824.png" alt=""></div>
-                </div>
-                <div>
-                  <div class="text-center ">
-                    <p class="my-2">NGUYỄN TRUNG CHÍNH</p>
-                    <p class="text-[#0A9949] text-sm">PGS.TS. Bác sĩ Ung bướu</p>
-                    <p class="mt-4">
-                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
-                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
-                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
-                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
-                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
-                    </p>
-                    <p class="text-[#888888] text-sm ">4.8/5 (38 bình chọn)</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide rounded-tl-[50px] border border-[#EBEBEB] hover:shadow-2xl hover:border-transparent transition-all">
-              <div>
+        <div class="swiper mySwiper2 my-4">
+          <div class="swiper-wrapper my-4">
+            <div class="swiper-slide rounded-tl-[80px] border border-[#EBEBEB] hover:shadow-2xl hover:border-transparent transition-all">
+              <div class="bg-white">
                 <div class="relative ">
                   <div><img src="./public/img/Rectangle 6771.png" alt=""></div>
                   <div class="absolute bottom-0 w-2/3 left-10"><img src="./public/img/image 824.png" alt=""></div>
@@ -387,13 +393,13 @@
                       <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
                       <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
                     </p>
-                    <p class="text-[#888888] text-sm ">4.8/5 (38 bình chọn)</p>
+                    <p class="text-[#888888] text-sm  mb-4">4.8/5 (38 bình chọn)</p>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="swiper-slide rounded-tl-[50px] border border-[#EBEBEB] hover:shadow-2xl hover:border-transparent transition-all">
-              <div>
+            <div class="swiper-slide rounded-tl-[80px] border border-[#EBEBEB] hover:shadow-2xl hover:border-transparent transition-all">
+              <div class="bg-white">
                 <div class="relative ">
                   <div><img src="./public/img/Rectangle 6771.png" alt=""></div>
                   <div class="absolute bottom-0 w-2/3 left-10"><img src="./public/img/image 824.png" alt=""></div>
@@ -409,13 +415,13 @@
                       <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
                       <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
                     </p>
-                    <p class="text-[#888888] text-sm ">4.8/5 (38 bình chọn)</p>
+                    <p class="text-[#888888] text-sm  mb-4">4.8/5 (38 bình chọn)</p>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="swiper-slide rounded-tl-[50px] border border-[#EBEBEB] hover:shadow-2xl hover:border-transparent transition-all">
-              <div>
+            <div class="swiper-slide rounded-tl-[80px] border border-[#EBEBEB] hover:shadow-2xl hover:border-transparent transition-all">
+              <div class="bg-white">
                 <div class="relative ">
                   <div><img src="./public/img/Rectangle 6771.png" alt=""></div>
                   <div class="absolute bottom-0 w-2/3 left-10"><img src="./public/img/image 824.png" alt=""></div>
@@ -431,38 +437,164 @@
                       <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
                       <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
                     </p>
-                    <p class="text-[#888888] text-sm ">4.8/5 (38 bình chọn)</p>
+                    <p class="text-[#888888] text-sm  mb-4">4.8/5 (38 bình chọn)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide rounded-tl-[80px] border border-[#EBEBEB] hover:shadow-2xl hover:border-transparent transition-all">
+              <div class="bg-white">
+                <div class="relative ">
+                  <div><img src="./public/img/Rectangle 6771.png" alt=""></div>
+                  <div class="absolute bottom-0 w-2/3 left-10"><img src="./public/img/image 824.png" alt=""></div>
+                </div>
+                <div>
+                  <div class="text-center ">
+                    <p class="my-2">NGUYỄN TRUNG CHÍNH</p>
+                    <p class="text-[#0A9949] text-sm">PGS.TS. Bác sĩ Ung bướu</p>
+                    <p class="mt-4">
+                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                    </p>
+                    <p class="text-[#888888] text-sm  mb-4">4.8/5 (38 bình chọn)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide rounded-tl-[80px] border border-[#EBEBEB] hover:shadow-2xl hover:border-transparent transition-all">
+              <div class="bg-white">
+                <div class="relative ">
+                  <div><img src="./public/img/Rectangle 6771.png" alt=""></div>
+                  <div class="absolute bottom-0 w-2/3 left-10"><img src="./public/img/image 824.png" alt=""></div>
+                </div>
+                <div>
+                  <div class="text-center ">
+                    <p class="my-2">NGUYỄN TRUNG CHÍNH</p>
+                    <p class="text-[#0A9949] text-sm">PGS.TS. Bác sĩ Ung bướu</p>
+                    <p class="mt-4">
+                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                    </p>
+                    <p class="text-[#888888] text-sm  mb-4">4.8/5 (38 bình chọn)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide rounded-tl-[80px] border border-[#EBEBEB] hover:shadow-2xl hover:border-transparent transition-all">
+              <div class="bg-white">
+                <div class="relative ">
+                  <div><img src="./public/img/Rectangle 6771.png" alt=""></div>
+                  <div class="absolute bottom-0 w-2/3 left-10"><img src="./public/img/image 824.png" alt=""></div>
+                </div>
+                <div>
+                  <div class="text-center ">
+                    <p class="my-2">NGUYỄN TRUNG CHÍNH</p>
+                    <p class="text-[#0A9949] text-sm">PGS.TS. Bác sĩ Ung bướu</p>
+                    <p class="mt-4">
+                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                    </p>
+                    <p class="text-[#888888] text-sm  mb-4">4.8/5 (38 bình chọn)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide rounded-tl-[80px] border border-[#EBEBEB] hover:shadow-2xl hover:border-transparent transition-all">
+              <div class="bg-white">
+                <div class="relative ">
+                  <div><img src="./public/img/Rectangle 6771.png" alt=""></div>
+                  <div class="absolute bottom-0 w-2/3 left-10"><img src="./public/img/image 824.png" alt=""></div>
+                </div>
+                <div>
+                  <div class="text-center ">
+                    <p class="my-2">NGUYỄN TRUNG CHÍNH</p>
+                    <p class="text-[#0A9949] text-sm">PGS.TS. Bác sĩ Ung bướu</p>
+                    <p class="mt-4">
+                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                    </p>
+                    <p class="text-[#888888] text-sm  mb-4">4.8/5 (38 bình chọn)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide rounded-tl-[80px] border border-[#EBEBEB] hover:shadow-2xl hover:border-transparent transition-all">
+              <div class="bg-white">
+                <div class="relative ">
+                  <div><img src="./public/img/Rectangle 6771.png" alt=""></div>
+                  <div class="absolute bottom-0 w-2/3 left-10"><img src="./public/img/image 824.png" alt=""></div>
+                </div>
+                <div>
+                  <div class="text-center ">
+                    <p class="my-2">NGUYỄN TRUNG CHÍNH</p>
+                    <p class="text-[#0A9949] text-sm">PGS.TS. Bác sĩ Ung bướu</p>
+                    <p class="mt-4">
+                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                      <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
+                    </p>
+                    <p class="text-[#888888] text-sm mb-4">4.8/5 (38 bình chọn)</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next">
+            <i class="fa-solid fa-arrow-right p-4 rounded-full bg-white text-[#50C577] shadow-lg"></i>
+          </div>
+          <div class="swiper-button-prev">
+            <i class="fa-solid fa-arrow-left p-4 rounded-full bg-white shadow-lg text-[#50C577]"></i>
+          </div>
         </div>
       </div>
     </section>
-    <section class="mx-4">
+    <section class="mx-4 xl:mt-30">
       <div class="container ">
         <div class="cont">
           <div class="ima relative xl:block hidden">
             <img src="./public/img/Rectangle 6490.png" alt="">
           </div>
           <div class="xl:ml-30 xl:-mt-160 relative xl:z-1000 -z-1000">
-            <h1 class="font-bold text-[38px]  xl:mx-1 mx-auto text-center xl:text-white leading-[100%] lg:w-1/2 my-10">Cảm nhận của khách hàng sau khi sử dụng dịch vụ</h1>
+           <div class="flex ">
+              <h1 class="font-bold xl:text-[38px] text-2xl  xl:mx-1 mx-auto text-center xl:text-white leading-[100%] lg:w-1/2 my-10">Cảm nhận của khách hàng sau khi sử dụng dịch vụ</h1>
+              <div class="ml-120 hidden relative xl:flex items-center justify-end gap-4">
+                <div class="flex space-x-2">
+                  <div class="swiper-button-prev custom-swiper-btn absolute top-0 right-10 ml-10">
+                    <i class="fa-solid fa-arrow-right p-4 rounded-full bg-white shadow-lg text-[#50C577]"></i>
+                  </div>
+                  <div class="swiper-button-next  absolute top-0 right-0 custom-swiper-btn ">
+                    <i class="fa-solid fa-arrow-left p-4 rounded-full bg-white shadow-lg text-[#50C577]"></i>
+                  </div>
+                </div>
+              </div>
+           </div>
             <div class="swiper mySwiper3 relative ">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="shadow-2xl rounded-lg bg-white">
-                  <div class="relative">
-                    <div class="w-full">
-                      <img src="./public/img/Rectangle 6420.jpg" alt="">
+              <div class="swiper-wrapper rounded-lg">
+                <div class="swiper-slide rounded-lg">
+                  <div class="shadow-2xl rounded-xl  bg-white">
+                  <div class="relative ">
+                    <div class="w-full overflow-hidden rounded-tl-xl rounded-tr-xl">
+                      <img class="object-cover w-full" src="./public/img/Rectangle 6420.jpg" alt="">
                     </div>
                     <div class="w-1/4 absolute top-[50%] right-[35%]">
                       <img src="./public/img/Ellipse 1145.png" alt="">
                     </div>
                   </div>
-                  <div class="lg:mt-10 mt-12 px-4 ">
+                  <div class="my-10  px-4 py-3 ">
                     <h1 class="text-center font-bold text-[#252525] ">Nguyễn Minh Ánh</h1>
                     <p class="text-center text-[#252525]">
                       <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
@@ -479,16 +611,16 @@
                 </div>
               </div>
                 <div class="swiper-slide">
-                  <div class="shadow-2xl rounded-lg bg-white">
+                  <div class="shadow-2xl rounded-xl bg-white">
                     <div class="relative">
-                      <div class="w-full">
-                        <img src="./public/img/Rectangle 6420.jpg" alt="">
+                      <div class="w-full overflow-hidden rounded-tl-xl rounded-tr-xl">
+                        <img class="object-cover w-full" src="./public/img/Rectangle 6420.jpg" alt="">
                       </div>
                       <div class="w-1/4 absolute top-[50%] right-[35%]">
                         <img src="./public/img/Ellipse 1145.png" alt="">
                       </div>
                     </div>
-                    <div class="lg:mt-10 mt-12 px-4 ">
+                    <div class="my-10  px-4 py-3 ">
                       <h1 class="text-center font-bold text-[#252525] ">Nguyễn Minh Ánh</h1>
                       <p class="text-center text-[#252525]">
                         <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
@@ -505,16 +637,16 @@
                   </div>
                 </div>
                 <div class="swiper-slide">
-                  <div class="shadow-2xl rounded-lg bg-white">
+                  <div class="shadow-2xl rounded-xl bg-white">
                     <div class="relative">
-                      <div class="w-full">
-                        <img src="./public/img/Rectangle 6420.jpg" alt="">
+                      <div class="w-full overflow-hidden rounded-tl-xl rounded-tr-xl">
+                        <img class="object-cover w-full" src="./public/img/Rectangle 6420.jpg" alt="">
                       </div>
                       <div class="w-1/4 absolute top-[50%] right-[35%]">
                         <img src="./public/img/Ellipse 1145.png" alt="">
                       </div>
                     </div>
-                    <div class="lg:mt-10 mt-12 px-4 ">
+                    <div class="my-10  px-4 py-3 ">
                       <h1 class="text-center font-bold text-[#252525] ">Nguyễn Minh Ánh</h1>
                       <p class="text-center text-[#252525]">
                         <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
@@ -531,16 +663,16 @@
                   </div>
                 </div>
                 <div class="swiper-slide">
-                  <div class="shadow-2xl rounded-lg bg-white">
+                  <div class="shadow-2xl rounded-xl bg-white">
                     <div class="relative">
-                      <div class="w-full">
-                        <img src="./public/img/Rectangle 6420.jpg" alt="">
+                      <div class="w-full overflow-hidden rounded-tl-xl rounded-tr-xl">
+                        <img class="object-cover w-full" src="./public/img/Rectangle 6420.jpg" alt="">
                       </div>
                       <div class="w-1/4 absolute top-[50%] right-[35%]">
                         <img src="./public/img/Ellipse 1145.png" alt="">
                       </div>
                     </div>
-                    <div class="lg:mt-10 mt-12 px-4 ">
+                    <div class="my-10  px-4 py-3 ">
                       <h1 class="text-center font-bold text-[#252525] ">Nguyễn Minh Ánh</h1>
                       <p class="text-center text-[#252525]">
                         <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
@@ -557,16 +689,16 @@
                   </div>
                 </div>
                 <div class="swiper-slide">
-                  <div class="shadow-2xl rounded-lg bg-white">
+                  <div class="shadow-2xl rounded-xl bg-white">
                     <div class="relative">
-                      <div class="w-full">
-                        <img src="./public/img/Rectangle 6420.jpg" alt="">
+                      <div class="w-full overflow-hidden rounded-tl-xl rounded-tr-xl">
+                        <img class="object-cover w-full" src="./public/img/Rectangle 6420.jpg" alt="">
                       </div>
                       <div class="w-1/4 absolute top-[50%] right-[35%]">
                         <img src="./public/img/Ellipse 1145.png" alt="">
                       </div>
                     </div>
-                    <div class="lg:mt-10 mt-12 px-4 ">
+                    <div class="my-10  px-4 py-3">
                       <h1 class="text-center font-bold text-[#252525] ">Nguyễn Minh Ánh</h1>
                       <p class="text-center text-[#252525]">
                         <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
@@ -583,16 +715,16 @@
                   </div>
                 </div>
                 <div class="swiper-slide">
-                  <div class="shadow-2xl rounded-lg bg-white">
+                  <div class="shadow-2xl rounded-xl bg-white">
                     <div class="relative">
-                      <div class="w-full">
-                        <img src="./public/img/Rectangle 6420.jpg" alt="">
+                      <div class="w-full overflow-hidden rounded-tl-xl rounded-tr-xl">
+                        <img class="object-cover w-full" src="./public/img/Rectangle 6420.jpg" alt="">
                       </div>
                       <div class="w-1/4 absolute top-[50%] right-[35%]">
                         <img src="./public/img/Ellipse 1145.png" alt="">
                       </div>
                     </div>
-                    <div class="lg:mt-10 mt-12 px-4 ">
+                    <div class="my-10  px-4 py-3">
                       <h1 class="text-center font-bold text-[#252525] ">Nguyễn Minh Ánh</h1>
                       <p class="text-center text-[#252525]">
                         <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
@@ -609,16 +741,16 @@
                   </div>
                 </div>
                 <div class="swiper-slide">
-                  <div class="shadow-2xl rounded-lg bg-white">
+                  <div class="shadow-2xl rounded-xl bg-white">
                     <div class="relative">
-                      <div class="w-full">
-                        <img src="./public/img/Rectangle 6420.jpg" alt="">
+                      <div class="w-full overflow-hidden rounded-tl-xl rounded-tr-xl">
+                        <img class="object-cover w-full" src="./public/img/Rectangle 6420.jpg" alt="">
                       </div>
                       <div class="w-1/4 absolute top-[50%] right-[35%]">
                         <img src="./public/img/Ellipse 1145.png" alt="">
                       </div>
                     </div>
-                    <div class="lg:mt-10 mt-12 px-4 ">
+                    <div class="my-10  px-4 py-3 ">
                       <h1 class="text-center font-bold text-[#252525] ">Nguyễn Minh Ánh</h1>
                       <p class="text-center text-[#252525]">
                         <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
@@ -635,16 +767,16 @@
                   </div>
                 </div>
                 <div class="swiper-slide">
-                  <div class="shadow-2xl rounded-lg bg-white">
+                  <div class="shadow-2xl rounded-xl bg-white">
                     <div class="relative">
-                      <div class="w-full">
-                        <img src="./public/img/Rectangle 6420.jpg" alt="">
+                      <div class="w-full overflow-hidden rounded-tl-xl rounded-tr-xl">
+                        <img class="object-cover w-full" src="./public/img/Rectangle 6420.jpg" alt="">
                       </div>
                       <div class="w-1/4 absolute top-[50%] right-[35%]">
                         <img src="./public/img/Ellipse 1145.png" alt="">
                       </div>
                     </div>
-                    <div class="lg:mt-10 mt-12 px-4 ">
+                    <div class="my-10  px-4 py-3">
                       <h1 class="text-center font-bold text-[#252525] ">Nguyễn Minh Ánh</h1>
                       <p class="text-center text-[#252525]">
                         <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
@@ -661,16 +793,16 @@
                   </div>
                 </div>
                 <div class="swiper-slide">
-                  <div class="shadow-2xl rounded-lg bg-white">
-                    <div class="relative">
-                      <div class="w-full">
-                        <img src="./public/img/Rectangle 6420.jpg" alt="">
+                  <div class="shadow-2xl rounded-xl bg-white">
+                    <div class="relative ">
+                      <div class="w-full overflow-hidden rounded-tl-xl rounded-tr-xl">
+                        <img class="object-cover w-full" src="./public/img/Rectangle 6420.jpg" alt="">
                       </div>
                       <div class="w-1/4 absolute top-[50%] right-[35%]">
                         <img src="./public/img/Ellipse 1145.png" alt="">
                       </div>
                     </div>
-                    <div class="lg:mt-10 mt-12 px-4 ">
+                    <div class="my-10  px-4 py-3">
                       <h1 class="text-center font-bold text-[#252525] ">Nguyễn Minh Ánh</h1>
                       <p class="text-center text-[#252525]">
                         <span class="text-[#FFA800] text-sm "><i class="fa-solid fa-star"></i></span>
@@ -681,7 +813,7 @@
                       </p>
                       <div class="m-4">
                         <h1 class="text-center font-medium ">Bệnh viện Phương Đông mang đến cho tôi cảm giác vô cùng bình yên và an tâm khi thăm khám tại đây!</h1>
-                        <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit nulla etiam sed  </p>
+                        <p class="text-center ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit nulla etiam sed  </p>
                       </div>
                     </div>
                   </div>
@@ -699,12 +831,12 @@
           <div class="xl:flex gap-4">
             <div class=" flex-1 flex items-center justify-center ">
               <div class="head hidden xl:block text-center">
-                <p class="font-bold p-4 text-[38px] text-[#252525] border border-[#EBEBEB] border-t-0 border-l-0 border-r-0 ">Những câu hỏi thường gặp</p>
+                <p class="font-bold p-4 text-2xl xl:text-[38px] text-[#252525] border border-[#EBEBEB] border-t-0 border-l-0 border-r-0 ">Những câu hỏi thường gặp</p>
               </div>
             </div>
             <div class=" flex-1 flex items-center justify-center ">
               <div class="head text-center xl:block hidden">
-                <p class="font-bold text-[38px] text-[#252525]">Bảng giá dịch vụ gói Ortho-K</p>
+                <p class="font-bold xl:text-[38px] text-2xl text-[#252525]">Bảng giá dịch vụ gói Ortho-K</p>
               </div>
             </div>
         </div>
@@ -713,56 +845,87 @@
               <div class=" p-4 flex-1 flex  justify-center">
                 <div>
                   <div class="head xl:hidden block text-center">
-                    <p class="font-bold p-4 text-[38px] text-[#252525] border border-[#EBEBEB] border-t-0 border-l-0 border-r-0 ">Những câu hỏi thường gặp</p>
+                    <p class="font-bold p-4 text-2xl xl:text-[38px] text-[#252525] border border-[#EBEBEB] border-t-0 border-l-0 border-r-0 ">Những câu hỏi thường gặp</p>
                   </div>
-                  <div class="sub">
-                    <span class="flex py-4 justify-between">
-                      <p class=" font-medium text-lg text-[#252525]">Cách phân biệt giữa cảm cúm thông thường và covid-19? </p>
-                      <img src="./public/img/Frame 9197.png" alt="">
-                    </span>
-                    <p class="py-2 text-[#454545]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien, nec morbi mauris, turpis fringilla condimentum urna sagittis est. Id tortor odio posuere a cursus netus massa. Tellus etiam nisl pretium feugiat nulla. Pulvinar nisl et suspendisse velit ornare sed dolor, convallis dolor. Et, dignissim amet sed orci at amet id nulla mauris. </p>
                     <div class="nav">
                       <ul class="py-2 ">
-                        <li class="flex justify-between py-4 border border-[#EBEBEB] border-l-0 border-r-0">
-                         <p class="text-[#252525] text-lg font-medium">Cách phân biệt giữa cảm cúm thông thường và covid-19?</p>
-                          <img class="lg:block hidden" src="./public/img/Frame 91972.png" alt="">
+                        <li id="item" class="flex justify-between py-4 relative border border-[#EBEBEB] border-t-0 border-l-0 border-r-0 ">
+                          <div class="md:w-xl">
+                            <div class="flex justify-between">
+                              <p class="text-[#252525] text-lg font-medium">Cách phân biệt giữa cảm cúm thông thường và covid-19?</p>
+                              <img class="md:block hidden animate-fade animate-duration-[2000ms] animate-delay-0 image" data-state="first" src="./public/img/Frame 91972.png" alt="">
+                            </div>
+                            <p class="content py-2 text-[#454545] hidden animate-fade-down animate-duration-[2000ms] animate-delay-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien, nec morbi mauris, turpis fringilla condimentum urna sagittis est. Id tortor odio posuere a cursus netus massa. Tellus etiam nisl pretium feugiat nulla. Pulvinar nisl et suspendisse velit ornare sed dolor, convallis dolor. Et, dignissim amet sed orci at amet id nulla mauris. </p>
+                          </div>
                         </li>
-                        <li class="flex justify-between py-4 border border-[#EBEBEB] border-l-0 border-r-0 border-t-0">
-                          <p class="text-[#252525] text-lg font-medium">Cách phân biệt giữa cảm cúm thông thường và covid-19?</p>
-                          <img class="lg:block hidden" src="./public/img/Frame 91972.png" alt="">
+                        <li id="item" class="flex justify-between py-4 relative border border-[#EBEBEB] border-t-0 border-l-0 border-r-0 ">
+                          <div class="md:w-xl">
+                            <div class="flex justify-between">
+                              <p class="text-[#252525] text-lg font-medium">Cách phân biệt giữa cảm cúm thông thường và covid-19?</p>
+                              <img class="md:block hidden animate-fade animate-duration-[2000ms] animate-delay-0 image" data-state="first" src="./public/img/Frame 91972.png" alt="">
+                            </div>
+                            <p class="content py-2 text-[#454545] hidden animate-fade-down animate-duration-[2000ms] animate-delay-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien, nec morbi mauris, turpis fringilla condimentum urna sagittis est. Id tortor odio posuere a cursus netus massa. Tellus etiam nisl pretium feugiat nulla. Pulvinar nisl et suspendisse velit ornare sed dolor, convallis dolor. Et, dignissim amet sed orci at amet id nulla mauris. </p>
+                          </div>
                         </li>
-                        <li class="flex justify-between py-4 border border-[#EBEBEB] border-l-0 border-r-0 border-t-0">
-                          <p class="text-[#252525] text-lg font-medium">Cách phân biệt giữa cảm cúm thông thường và covid-19?</p>
-                          <img class="lg:block hidden" src="./public/img/Frame 91972.png" alt="">
+                        <li id="item" class="flex justify-between py-4 relative border border-[#EBEBEB] border-t-0 border-l-0 border-r-0 ">
+                          <div class="md:w-xl">
+                            <div class="flex justify-between">
+                              <p class="text-[#252525] text-lg font-medium">Cách phân biệt giữa cảm cúm thông thường và covid-19?</p>
+                              <img class="md:block hidden animate-fade animate-duration-[2000ms] animate-delay-0 image" data-state="first" src="./public/img/Frame 91972.png" alt="">
+                            </div>
+                            <p class="content py-2 text-[#454545] hidden animate-fade-down animate-duration-[2000ms] animate-delay-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien, nec morbi mauris, turpis fringilla condimentum urna sagittis est. Id tortor odio posuere a cursus netus massa. Tellus etiam nisl pretium feugiat nulla. Pulvinar nisl et suspendisse velit ornare sed dolor, convallis dolor. Et, dignissim amet sed orci at amet id nulla mauris. </p>
+                          </div>
                         </li>
-                        <li class="flex justify-between py-4 border border-[#EBEBEB] border-l-0 border-r-0 border-t-0">
-                          <p class="text-[#252525] text-lg font-medium">Cách phân biệt giữa cảm cúm thông thường và covid-19?</p>
-                          <img class="lg:block hidden" src="./public/img/Frame 91972.png" alt="">
+                        <li id="item" class="flex justify-between py-4 relative border border-[#EBEBEB] border-t-0 border-l-0 border-r-0 ">
+                          <div class="md:w-xl">
+                            <div class="flex justify-between">
+                              <p class="text-[#252525] text-lg font-medium">Cách phân biệt giữa cảm cúm thông thường và covid-19?</p>
+                              <img class="md:block hidden animate-fade animate-duration-[2000ms] animate-delay-0 image" data-state="first" src="./public/img/Frame 91972.png" alt="">
+                            </div>
+                            <p class="content py-2 text-[#454545] hidden animate-fade-down animate-duration-[2000ms] animate-delay-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien, nec morbi mauris, turpis fringilla condimentum urna sagittis est. Id tortor odio posuere a cursus netus massa. Tellus etiam nisl pretium feugiat nulla. Pulvinar nisl et suspendisse velit ornare sed dolor, convallis dolor. Et, dignissim amet sed orci at amet id nulla mauris. </p>
+                          </div>
                         </li>
-                        <li class="flex justify-between py-4 border border-[#EBEBEB] border-l-0 border-r-0 border-t-0">
-                          <p class="text-[#252525] text-lg font-medium">Cách phân biệt giữa cảm cúm thông thường và covid-19?</p>
-                          <img class="lg:block hidden" src="./public/img/Frame 91972.png" alt="">
+                        <li id="item" class="flex justify-between py-4 relative border border-[#EBEBEB] border-t-0 border-l-0 border-r-0 ">
+                          <div class="md:w-xl">
+                            <div class="flex justify-between">
+                              <p class="text-[#252525] text-lg font-medium">Cách phân biệt giữa cảm cúm thông thường và covid-19?</p>
+                              <img class="md:block hidden animate-fade animate-duration-[2000ms] animate-delay-0 image" data-state="first" src="./public/img/Frame 91972.png" alt="">
+                            </div>
+                            <p class="content py-2 text-[#454545] hidden animate-fade-down animate-duration-[2000ms] animate-delay-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien, nec morbi mauris, turpis fringilla condimentum urna sagittis est. Id tortor odio posuere a cursus netus massa. Tellus etiam nisl pretium feugiat nulla. Pulvinar nisl et suspendisse velit ornare sed dolor, convallis dolor. Et, dignissim amet sed orci at amet id nulla mauris. </p>
+                          </div>
+                        </li>
+                        <li id="item" class="flex justify-between py-4 relative border border-[#EBEBEB] border-t-0 border-l-0 border-r-0 ">
+                          <div class="md:w-xl">
+                            <div class="flex justify-between">
+                              <p class="text-[#252525] text-lg font-medium">Cách phân biệt giữa cảm cúm thông thường và covid-19?</p>
+                              <img class="md:block hidden animate-fade animate-duration-[2000ms] animate-delay-0 image" data-state="first" src="./public/img/Frame 91972.png" alt="">
+                            </div>
+                            <p class="content py-2 text-[#454545] hidden animate-fade-down animate-duration-[2000ms] animate-delay-0">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien, nec morbi mauris, turpis fringilla condimentum urna sagittis est. Id tortor odio posuere a cursus netus massa. Tellus etiam nisl pretium feugiat nulla. Pulvinar nisl et suspendisse velit ornare sed dolor, convallis dolor. Et, dignissim amet sed orci at amet id nulla mauris. </p>
+                          </div>
                         </li>
                       </ul>
                     </div>
-                  </div>
+                  
                 </div>
               </div>
               <div class="  flex-1 flex justify-center ">
                 <div>
                   <div class="head xl:hidden block text-center">
-                    <p class="font-bold text-[38px] text-[#252525]">Bảng giá dịch vụ gói Ortho-K</p>
+                    <p class="font-bold text-2xl xl:text-[38px] text-[#252525]">Bảng giá dịch vụ gói Ortho-K</p>
                   </div>
-                  <div class="nav">
-                    <ul class="text-[#888888] flex py-4">
-                      <li class="p-2 hover:text-[#50C577] cursor-pointer ">ORTHO K - 01</li>
-                      <li class="p-2 hover:text-[#50C577] cursor-pointer ">ORTHO K - 02</li>
-                      <li class="p-2 hover:text-[#50C577] cursor-pointer ">ORTHO K - 03</li>
-                      <li class="p-2 hover:text-[#50C577] cursor-pointer ">ORTHO K - 04</li>
-                      <li class="p-2 hover:text-[#50C577] cursor-pointer ">ORTHO K - 05</li>
+                  <div class="nav ">
+                    <ul class="text-[#888888] flex justify-around items-center py-4">
+                      <li class="tab text-[#50C577] border-b-2 border-[#50C577] lg:text-base text-[10px] md:p-2 hover:text-[#50C577] cursor-pointer " data-image="image 940.png">ORTHO K - 01</li>
+                      <li class="tab lg:text-base text-[10px] md:p-2 hover:text-[#50C577] cursor-pointer " data-image="image 940.png">ORTHO K - 02</li>
+                      <li class="tab lg:text-base text-[10px] md:p-2 hover:text-[#50C577] cursor-pointer " data-image="image 940.png">ORTHO K - 03</li>
+                      <li class="tab lg:text-base text-[10px] md:p-2 hover:text-[#50C577] cursor-pointer " data-image="image 940.png">ORTHO K - 04</li>
+                      <li class="tab lg:text-base text-[10px] md:p-2 hover:text-[#50C577] cursor-pointer " data-image="image 940.png">ORTHO K - 05</li>
                     </ul>
                   </div>
-                  <img src="./public/img/image 940.png" alt="">
+                  <div class="relative overflow-hidden mx-auto">
+                    <img id="ortho-image" class="animate-fade-left animate-duration-[2000ms] animate-delay-0" src="./public/img/image 940.png" alt="">
+                  </div>
                 </div>
               </div>
               </div>
@@ -775,24 +938,24 @@
         <img src="./public/img/Rectangle 6508.jpg" alt="">
       </div>
       <div class="container ">
-        <div class="lg:flex flex-col gap-4 w-full relative xl:z-100 xl:-mt-110 -z-1000">
+        <div class="lg:flex flex-col gap-4 w-full relative z-100 xl:-mt-110 ">
           <!-- Hàng 1 -->
           <div class="xl:flex gap-4 xl:ml-25 ">
-              <div class="gap-4 p-4 flex-1 flex items-center justify-center ">
+              <div class="gap-4 p-4 flex-1 flex items-center justify-center">
                 <div class="shadow-2xl rounded-lg bg-white ">
                   <div class="head rounded-tl-lg rounded-tr-lg p-4 text-white text-center bg-gradient-to-r from-[#50C577] to-[#2DBEFC]">
                     <h1 class="font-bold text-3xl">Đăng ký tư vấn miễn phí</h1>
                     <p>Đặt hẹn ngay để nhận tư vấn và chúng tôi sẽ xếp lịch khám kịp thời!</p>
                   </div>
-                  <div class="xl:flex my-4">
+                  <div class="xl:flex my-6 mx-8">
                     <div class="flex-1 w-full  xl:flex xl:justify-center xl:items-center">
                       <div class="">
                         <div class="relative mx-2">
-                          <input type="text" id="floatingInput" placeholder="Nhập nội dung..." 
+                          <input type="text" id="floatingInput1" placeholder="Nhập nội dung..." 
                                  class="peer w-full border border-gray-300 rounded-md px-3 pt-4 pb-2 outline-none focus:border-blue-500 transition 
                                         placeholder-transparent" />
                           
-                          <label for="floatingInput" 
+                          <label for="floatingInput1" 
                                  class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 text-base transition-all
                                         peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 
                                         peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 
@@ -801,11 +964,11 @@
                           </label>
                         </div>
                         <div class="relative mt-5  mx-2">
-                          <input type="text" id="floatingInput" placeholder="Nhập nội dung..." 
+                          <input type="text" id="floatingInput2" placeholder="Nhập nội dung..." 
                                  class="peer w-full border border-gray-300 rounded-md px-3 pt-4 pb-2 outline-none focus:border-blue-500 transition 
                                         placeholder-transparent" />
                           
-                          <label for="floatingInput" 
+                          <label for="floatingInput2" 
                                  class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 text-base transition-all
                                         peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 
                                         peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 
@@ -814,11 +977,11 @@
                           </label>
                         </div>
                         <div class="relative mt-5  mx-2">
-                          <input type="text" id="floatingInput" placeholder="Nhập nội dung..." 
+                          <input type="text" id="floatingInput3" placeholder="Nhập nội dung..." 
                                  class="peer w-full border border-gray-300 rounded-md px-3 pt-4 pb-2 outline-none focus:border-blue-500 transition 
                                         placeholder-transparent" />
                           
-                          <label for="floatingInput" 
+                          <label for="floatingInput3" 
                                  class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 text-base transition-all
                                         peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 
                                         peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 
@@ -826,17 +989,16 @@
                             Số điện thoại*
                           </label>
                         </div>
-                        <div class="relative mt-5  mx-2">
-                          <input type="date" id="floatingInput" placeholder="Nhập nội dung..." 
+                        <div class="relative mt-5 mx-2 flex justify-around items-center">
+                          <input type="text" id="datepicker" placeholder="Nhập nội dung..." 
                                  class="peer w-full border border-gray-300 rounded-md px-3 pt-4 pb-2 outline-none focus:border-blue-500 transition 
                                         placeholder-transparent" />
-                          
-                          <label for="floatingInput" 
-                                 class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 text-base transition-all
+                          <label for="datepicker" 
+                                 class="items-center absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 text-base transition-all
                                         peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 
                                         peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 
                                         peer-focus:top-0 peer-focus:-translate-y-1/2 peer-focus:text-sm peer-focus:text-blue-500 peer-focus:px-2 bg-white">
-                            Ngày đặt
+                            <p>Ngày đặt</p>
                           </label>
                         </div>
                       </div>
@@ -844,11 +1006,11 @@
                     <div class="flex-1 mx-2 xl:mx-5 ">
                       <div>
                         <div class="relative xl:mt-0.5 mt-5">
-                          <textarea rows="4" id="floatingInput" placeholder="Nhập nội dung..." 
+                          <textarea rows="4" id="floatingTextarea" placeholder="Nhập nội dung..." 
                                  class="peer w-full border border-gray-300 rounded-md px-3 pt-4 pb-2 outline-none focus:border-blue-500 transition 
                                         placeholder-transparent" ></textarea>
                           
-                          <label for="floatingInput" 
+                          <label for="floatingTextarea" 
                                  class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 text-base transition-all
                                         peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 
                                         peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 
@@ -856,12 +1018,26 @@
                             Nhập nội dung
                           </label>
                         </div>
-                        <div class="flex justify-around items-center mt-5">
-                          <input class="" type="checkbox" name="" id="">
-                          <p>Tôi không phải người máy</p>
+                        <div class="flex justify-around items-center gap-2 mt-5">
+                          <div class="mt-4">
+                            <label class="inline-flex items-center space-x-2 cursor-pointer">
+                              <input type="checkbox" class="sr-only peer" />
+                              <div class="w-5 h-5 border-1 border-[#EBEBEB] rounded-md flex items-center justify-center peer-checked:bg-blue-500">
+                                <i class="fa-solid fa-check text-white hidden peer-checked:block"></i>
+                              </div>
+                            </label>
+                          </div>
+                          <p class="text-sm">Tôi không phải người máy</p>
                           <img src="./public/img/robot.png" alt="">
                         </div>
-                        <button class="text-white rounded-full mt-9  shadow-2xl cursor-pointer w-full py-3 bg-gradient-to-r from-[#50C577] to-[#2DBEFC]">
+                        <button class="text-white rounded-full mt-5 cursor-pointer 
+                                        w-full py-3 bg-gradient-to-r from-[#50C577] to-[#2DBEFC]
+                                        border border-[#50C577] 
+                                        shadow-lg shadow-gray-400/50 
+                                        transition-all duration-200 
+                                        hover:from-[#3cbf94] hover:to-[#00aaff] 
+                                        hover:shadow-xl hover:brightness-110 
+                                        active:shadow-md active:brightness-90">
                           GỬI YÊU CẦU
                         </button>
                       </div>
@@ -907,7 +1083,7 @@
                   <p>Hotline Hỗ trợ khách hàng: 1900 1806</p>
                 </div>
               </div>
-              <div class="p-4  flex-1 flex justify-center  text-white">
+              <div class="p-4  flex-1 flex   text-white">
                 <div class="flex-col justify-around items-center">
                   <h4 class="font-medium text-lg my-2">Theo dõi chúng tôi</h4>
                   <div class="flex justify-around my-5">
@@ -922,19 +1098,109 @@
               </div>
           </div>
       </div>
-      <p class="text-center text-white my-2">© Copyright 2022 Bệnh Viện Đa khoa Phương Đông. All rights reserved</p>
-      </div>
+      
     </section>
     <script type="module" src="/src/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
+    flatpickr("#datepicker", {
+    dateFormat: "Y-m-d", // Định dạng ngày
+    disableMobile: true,  // Tắt chế độ xem trên di động (nếu bạn muốn sử dụng thiết bị di động)
+    allowInput: true,  // Cho phép người dùng nhập ngày thủ công
+    theme: "tailwind" // Tùy chọn theme cho Tailwind
+    });
     document.addEventListener("DOMContentLoaded", function () {
     const menuToggle = document.getElementById("menu-toggle");
     const menuClose = document.getElementById("menu-close");
     const menu = document.getElementById("menu");
     const overlay = document.getElementById("overlay");
+    const header = document.getElementById("desktop-menu");
+    const image = document.querySelector(".image-header img");
+    const items = document.querySelectorAll(".nav li");
+    const tabs = document.querySelectorAll(".tab");
+    const imageli = document.getElementById("ortho-image");
 
+    document.querySelectorAll('.relative input, .relative textarea').forEach(field => {
+    const label = field.nextElementSibling;
+
+    if (!label || label.tagName.toLowerCase() !== 'label') return;
+
+    const toggleLabel = () => {
+    if (field.value.trim() !== '') {
+      label.classList.add('!top-0', '!-translate-y-1/2', 'text-sm', 'text-blue-500', 'px-2');
+    } else if (!field.matches(':focus')) {
+      label.classList.remove('!top-0', '!-translate-y-1/2', 'text-sm', 'text-blue-500', 'px-2');
+    }
+    };
+
+    field.addEventListener('input', toggleLabel);
+    field.addEventListener('blur', toggleLabel);
+    field.addEventListener('focus', toggleLabel);
+
+    toggleLabel(); 
+    });
+
+
+
+    flatpickr("#datepicker", {
+    onChange: function(selectedDates) {
+      const label = document.querySelector("label[for='datepicker']");
+      if (selectedDates.length > 0) {
+        label.classList.add("-top-2", "-translate-y-1/2", "text-sm", "text-blue-500");
+        label.classList.remove("top-1/2", "-translate-y-1/2", "text-base", "text-gray-400");
+      } else {
+        label.classList.remove("top-0", "-translate-y-1/2", "text-sm", "text-blue-500");
+        label.classList.add("top-1/2", "-translate-y-1/2", "text-base", "text-gray-400");
+      }
+    }
+  });
+
+  const imageElement = document.getElementById('ortho-image');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const imageSrc = tab.getAttribute('data-image');
+      imageElement.src = `./public/img/${imageSrc}`;
+      
+      imageElement.classList.remove('animate-fade-left');
+      tab.classList.add('text-[#50C577]', 'border-b-2', 'border-[#50C577]');
+      void imageElement.offsetWidth;
+      imageElement.classList.add('animate-fade-left');
+      
+      tabs.forEach(t => {
+        t.classList.remove('text-[#50C577]', 'border-b-2', 'border-[#50C577]');
+        t.classList.add('text-[#888888]');
+      });
+
+      tab.classList.remove('text-[#888888]');
+      tab.classList.add('text-[#50C577]', 'border-b-2', 'border-[#50C577]');
+      })
+    });
+    items.forEach(item =>{
+      item.addEventListener('click', function(){
+        const content = this.querySelector(".content");
+        const image = this.querySelector(".image")
+        content.classList.toggle('hidden');
+        
+        const state = image.getAttribute('data-state');
+
+        image.style.opacity = 0;
+
+        setTimeout(()=>{
+          if (state === 'first'){
+            image.src = './public/img/Frame 9197.png';
+            image.setAttribute('data-state' ,'second');
+          } else{
+            image.src = './public/img/Frame 91972.png';
+            image.setAttribute('data-state' , 'first')
+          }
+
+          image.style.opacity = 1;
+        },300)
+        
+    })
+  })
     
     function openMenu() {
         menu.classList.remove("-translate-x-full");
@@ -949,6 +1215,19 @@
         overlay.classList.remove("opacity-50");
     }
 
+    function handleScroll() {
+        if (window.scrollY >= (image.clientHeight)/3) {
+            header.classList.remove("bg-transparent");
+            header.classList.add("bg-white", "shadow-md");
+        } else {
+            header.classList.add("bg-transparent");
+            header.classList.remove("bg-white", "shadow-md");
+        }
+    }
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+
     menuToggle.addEventListener("click", openMenu);
 
     menuClose.addEventListener("click", closeMenu);
@@ -958,6 +1237,10 @@
       var swiper = new Swiper(".mySwiper", {
         slidesPerView: 1,
         loop:true,
+        navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
         autoplay: {
           delay: 2500,
           disableOnInteraction: false,
@@ -986,23 +1269,22 @@
       });
 
       var swiper2 = new Swiper(".mySwiper2", {
-        slidesPerView: 1,
-        loop:true,
-        autoplay: {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      autoplay: {
           delay: 2500,
           disableOnInteraction: false,
         },
-        centeredSlides: true,
-        spaceBetween: 20,
-        pagination: {
-          el: ".swiper-pagination",
-          type: "fraction",
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        breakpoints:{
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints:{
           640: {
             slidesPerView: 2,
             spaceBetween: 20,
@@ -1016,7 +1298,7 @@
             spaceBetween: 50,
           },
         }
-      });
+    });
       var swiper3 = new Swiper(".mySwiper3", {
       slidesPerView: 1,
       loop:true,
@@ -1029,6 +1311,10 @@
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
       },
       breakpoints:{
           640: {
